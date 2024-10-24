@@ -1,1 +1,3 @@
-fronmatter;markdown;jinja2
+fronmatter
+markdown
+jinja2
