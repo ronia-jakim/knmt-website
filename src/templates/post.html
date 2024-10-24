@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block moreCSS %}
+{% endblock %}
+
+{% block mainText %}
+
+<h1>{{ f.title }}</h1>
+{% if f.author %}
+  <h2>{{ f.author }}</h2>
+{% endif %}
+<h3>{{ f.date }} godz. {{ f.time }}</h3>
+
+<div>
+  {{ f.content }}
+</div>
+
+{% endblock %}

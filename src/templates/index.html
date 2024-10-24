@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block moreCSS %}
+<link rel="stylesheet" href="stylesheets/news.css">
+{% endblock %}
+
+{% block mainText %}
+
+{% for p in posts %}
+<div class="post_box">
+  <div class="post_title" onclick="location.href='{{ p.path }}'">{{ p.title }}</div>
+  <div class="post_date_author">{{ p.date }} {{ p.author }}</div>
+  <p class="description">{{ p.description }}</p>
+</div>
+{% endfor %}
+
+
+{% endblock %}
