@@ -1,9 +1,13 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Koło Naukowe Matematyków Teoretyków</title>
-    <link rel="icon" href="img/logo/logo.png" type="image/icon type">
+    <link rel="icon" href="../assets/img/logo/logo.png" type="image/icon type">
 
-    <link rel="stylesheet" href="build/stylesheets/basic-style.css"> 
+    <link rel="stylesheet" href="stylesheets/basic-style.css">
+
+    {% block moreCSS %}
+    {% endblock %}
 
     <meta name="keywords" content="koło, naukowe, kolo, matematyka, matematyków, matematykow, worclaw, wrocław, teoretycznych, teoretyczna">
     <meta name="description" content="Strona internetowa Koła Naukowego Matematyków Teoretyków na Uniwersytecie Wrocławskim">
@@ -13,7 +17,7 @@
     <div class="main_header">
 
       <div class="left_header">
-        <img src="img/uwr-logo.svg" height="80px;" onclick="window.open('https://www.math.uni.wroc.pl/', '_blank')">
+        <img src="../assets/img/uwr-logo.svg" height="80px;" onclick="window.open('https://www.math.uni.wroc.pl/', '_blank')">
         <div>
           <h1>Koło Naukowe Matematyków Teoretyków</h1>
           <h3>Uniwersytetu Wrocławskiego</h3>
@@ -21,8 +25,8 @@
       </div>
 
       <div class="right_header">
-        <img src="img/facebook.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')">
-        <img src="img/calendar.svg">
+        <img src="../assets/img/facebook.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')">
+        <img src="../assets/img/calendar.svg">
       </div>
 
     </div>
@@ -35,6 +39,9 @@
 
     <div class="main_container">
 
+      {% block mainText %}
+      {% endblock %}
+    
     </div>
 
     <footer>
