@@ -2,8 +2,9 @@
 <html>
   <head>
     <title>Koło Naukowe Matematyków Teoretyków</title>
-    <link rel="icon" href="assets/img/logo/logo.png" type="image/icon type">
+    <link rel="icon" href="/knmt-website/assets/img/logo/logo.png" type="image/icon type">
 
+    <link rel="stylesheet" href="/knmt-website/stylesheets/basic-style.css">
 
     {% block moreCSS %}
     {% endblock %}
@@ -16,7 +17,7 @@
     <div class="main_header">
 
       <div class="left_header">
-        <img src="assets/img/uwr-logo.svg" height="80px;" onclick="window.open('https://www.math.uni.wroc.pl/', '_blank')">
+        <img src="/knmt-website/assets/img/uwr-logo.svg" height="80px;" onclick="window.open('https://www.math.uni.wroc.pl/', '_blank')">
         <div>
           <h1>Koło Naukowe Matematyków Teoretyków</h1>
           <h3>Uniwersytetu Wrocławskiego</h3>
@@ -24,16 +25,16 @@
       </div>
 
       <div class="right_header">
-        <img src="assets/img/facebook.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')">
-        <img src="assets/img/calendar.svg">
+        <img src="/knmt-website/assets/img/facebook.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')">
+        <img src="knmt-website/assets/img/calendar.svg">
       </div>
 
     </div>
     <div class="button_menu">
-      <button onclick="location.href=''">Aktualności</button>
-      <button onclick="location.href='info.html'">Informacje</button>
-      <button onclick="location.href='join.html'">Dołącz</button>
-      <button onclick="location.href='wss.html'">Wrocławskie Spotkanie Szkockie</button>
+      <button onclick="location.href='/knmt-website/'">Aktualności</button>
+      <button onclick="location.href='/knmt-website/info.html'">Informacje</button>
+      <button onclick="location.href='/knmt-website/join.html'">Dołącz</button>
+      <button onclick="location.href='/knmt-website/wss.html'">Wrocławskie Spotkanie Szkockie</button>
     </div>
 
     <div class="main_container">
