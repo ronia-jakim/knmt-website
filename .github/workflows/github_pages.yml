@@ -20,6 +20,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: build_website
+        uses: gha-utilities/sass-build@v0.6.0
         run: ./build.sh
 
       - name: Upload static files as artifact
