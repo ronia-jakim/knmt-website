@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-22.4
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
