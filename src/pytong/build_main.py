@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-from os import walk
 import frontmatter 
 import markdown
 
