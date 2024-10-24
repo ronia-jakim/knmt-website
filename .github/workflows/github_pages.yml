@@ -23,7 +23,7 @@ jobs:
         run: ./build.sh
       
       - name: Compile CSS from SCSS files
-        uses: gha-utilities/sass-build
+        uses: gha-utilities/sass-build@v0.6.0
         with:
           source: src/stylesheets
           destination:  build/stylesheets
