@@ -20,8 +20,14 @@ jobs:
           pip install -r requirements.txt
 
       - name: build_website
-        uses: gha-utilities/sass-build@v0.6.0
         run: ./build.sh
+      
+      - name: Compile CSS from SCSS files
+          uses: gha-utilities/sass-build@v0.4.7
+          with:
+              source: src/stylesheets
+              destination:  build/stylesheets
+
 
       - name: Upload static files as artifact
         id: deployment
