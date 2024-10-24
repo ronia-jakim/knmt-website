@@ -19,16 +19,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: install sass
+        run: sudo apt install sass
+
       - name: build_website
         run: ./build.sh
       
-      - name: Compile CSS from SCSS files
-        uses: gha-utilities/sass-build@v0.6.0
-        with:
-          source: ./src/stylesheets
-          destination:  ./build/stylesheets
-
-
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
