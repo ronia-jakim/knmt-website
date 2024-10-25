@@ -14,9 +14,7 @@
     }
 
     # Handle path prefix
-    handle /knmt-website/* {
-        # Remove the prefix before serving files
-        uri strip_prefix /knmt-website
+    handle /* {
 
         # Serve static files from build directory
         root * ./build
@@ -27,7 +25,6 @@
     }
 
     # Redirect root to prefixed path
-    redir / /knmt-website/
 
     # Handle errors
     handle_errors {

@@ -10,7 +10,14 @@ sass ./src/stylesheets/colors_fonts.scss ./build/stylesheets/colors_fonts.css
 sass ./src/stylesheets/basic-style.scss ./build/stylesheets/basic-style.css
 sass ./src/stylesheets/news.scss ./build/stylesheets/news.css
 
-./src/pytong/build_main.py 
+
+if [[ " $* " == *" --github-pages "* ]]; then
+  ./src/pytong/build_main.py --github-pages
+else
+  ./src/pytong/build_main.py 
+fi
+
+
 
 cp -r ./build ./knmt-website
 

@@ -2,14 +2,13 @@
 <html>
   <head>
       {% if github %}
-        <title>xd</title>
-      {% else %}
+      <base ahref="/knmt-website">
+      {% endif %}
 
       <title>Koło Naukowe Matematyków Teoretyków</title>
-      {% endif %}
-    <link rel="icon" href="/knmt-website/assets/img/logo/logo.png" type="image/icon type">
+    <link rel="icon" href="assets/img/logo/logo.png" type="image/icon type">
 
-    <link rel="stylesheet" href="/knmt-website/stylesheets/basic-style.css">
+    <link rel="stylesheet" href="stylesheets/basic-style.css">
 
     {% block moreCSS %}
     {% endblock %}
@@ -25,12 +24,12 @@
 
           <input class="search_bar" type="text" id="search" name="search" value placeholder="Szukaj" />
 
-          <img src="/knmt-website/assets/img/facebook.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')" />
-          <img src="/knmt-website/assets/img/calendar.svg" />
+          <img src="assets/img/facebook.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')" />
+          <img src="assets/img/calendar.svg" />
         </div>
 
       <div class="left_header">
-        <img src="/knmt-website/assets/img/uwr-logo.svg" height="80px;" onclick="window.open('https://www.math.uni.wroc.pl/', '_blank')">
+        <img src="assets/img/uwr-logo.svg" height="80px;" onclick="window.open('https://www.math.uni.wroc.pl/', '_blank')">
         <div>
           <h1>Koło Naukowe Matematyków Teoretyków</h1>
           <h3>Uniwersytetu Wrocławskiego</h3>
@@ -42,11 +41,11 @@
 
     </div>
     <div class="button_menu">
-      <button onclick="location.href='/knmt-website/'">Aktualności</button>
-      <button onclick="location.href='/knmt-website/info.html'">Informacje</button>
-      <button onclick="location.href='/knmt-website/calendar.html'">Kalendarz</button>
-      <button onclick="location.href='/knmt-website/join.html'">Dołącz</button>
-      <button onclick="location.href='/knmt-website/wss.html'">Wrocławskie Spotkanie Szkockie</button>
+      <button onclick="location.href='/'">Aktualności</button>
+      <button onclick="location.href='info.html'">Informacje</button>
+      <button onclick="location.href='calendar.html'">Kalendarz</button>
+      <button onclick="location.href='join.html'">Dołącz</button>
+      <button onclick="location.href='wss.html'">Wrocławskie Spotkanie Szkockie</button>
     </div>
 
     <div class="main_container">
@@ -69,7 +68,7 @@
           <h3>Wyszukaj</h3>
           <input class="search_bar" type="text" id="search" name="search" value placeholder="Szukaj">
         </div>
-      <img src="/knmt-website/assets/img/logo/logo_knmt.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')" />
+      <img src="assets/img/logo/logo_knmt.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')" />
       </div>
 
       <div class="author_foot">
