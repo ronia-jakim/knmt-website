@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block moreCSS %}
+<link rel="stylesheet" href="/stylesheets/post.css">
 {% endblock %}
 
 {% block mainText %}
@@ -11,7 +12,7 @@
 {% endif %}
 <h3>{{ f.date }} godz. {{ f.time }}</h3>
 
-<div>
+<div class="cnt">
   {{ f.content }}
 </div>
 

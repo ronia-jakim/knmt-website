@@ -1,0 +1,23 @@
+@import 'colors_fonts';
+
+h2 {
+  color: $subtitle;
+
+  font-family: Nunito;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.cnt {
+  font-family: Nunito;
+
+  font-size: 16px;
+  color: $fg;
+}
+
+.acc {
+  color: $purple;
+  font-weight: 800;
+}

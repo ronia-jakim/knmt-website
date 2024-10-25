@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block moreCSS %}
+<link rel="stylesheet" href="/stylesheets/post.css">
+{% endblock %}
+
+{% block mainText %}
+
+<h2>Kontakt</h2>
+          
+pl. Grunwaldzki 2<br>
+50-384 Wrocław<br>
+POLSKA<br>
+<a href="mailto:knmt.wmii.uwr@gmail.com">knmt.wmii.uwr@gmail.com</a>
+
+<h2>Zarząd koła</h2>
+
+<span class="acc">Przewodniczący:</span> {{ p.prezes }}<br/>
+
+<span class="acc">Wice-przewodniczący:</span> {{ p.wice }}<br/>
+
+<span class="acc">Sekretarz:</span> {{ p.sekretarz }}<br/>
+
+<span class="acc">Skarbnik:</span> {{ p.skarbnik }}<br/>
+
+{% endblock %}

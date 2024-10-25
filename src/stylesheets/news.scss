@@ -70,9 +70,13 @@
 }
 
 .side_bar {
-  height: 100px;
+  min-height: 100%;
+
   // background-color: green;
 
   width: 35%;
   margin-left: 5%;
+
+  boder-left: 10px solid;
+  padding-left: 5%;
 }
