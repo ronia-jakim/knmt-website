@@ -65,7 +65,8 @@ body {
   width: 300px;
   display:flex;
   flex-direction:row;
-  justify-items: center;
+  justify-items: flex-end;
+  gap: 20px;
 }
 
 h1 {
