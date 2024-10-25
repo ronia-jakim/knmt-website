@@ -1,3 +1,4 @@
 python-frontmatter
 markdown
 jinja2
+flask
