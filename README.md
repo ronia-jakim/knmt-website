@@ -17,7 +17,7 @@ Wszystkie wpisypojawiające się na stronie Aktualności są przechowywane w fol
 - autor (dotyczy referatu)
 - data (format `YYYY.MM.DD`)
 - godzina (dotyczy referatów, format `HH:MM`)
-- obrazek poglądowy (jeśli nie jest dołączony, to użyty jest domyślny plik w `assets/img/post_preview.jpg`
+- obrazek poglądowy (jeśli nie jest dołączony, to użyty jest domyślny plik w `/assets/img/post_preview.jpg`
 
 Wszystkie zdjęcia, które mają być zawarte w poście muszą być w folderze posta, a ścieżki w pliku `*.md` mają być względem tegoż foldera.
 
