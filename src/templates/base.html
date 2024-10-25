@@ -2,9 +2,9 @@
 <html>
   <head>
     <title>Koło Naukowe Matematyków Teoretyków</title>
-    <link rel="icon" href="/assets/img/logo/logo.png" type="image/icon type">
+    <link rel="icon" href="/knmt-website/assets/img/logo/logo.png" type="image/icon type">
 
-    <link rel="stylesheet" href="/stylesheets/basic-style.css">
+    <link rel="stylesheet" href="/knmt-website/stylesheets/basic-style.css">
 
     {% block moreCSS %}
     {% endblock %}
@@ -17,31 +17,42 @@
     <div class="main_header">
 
       <div class="left_header">
-        <img src="/assets/img/uwr-logo.svg" height="80px;" onclick="window.open('https://www.math.uni.wroc.pl/', '_blank')">
+        <img src="/knmt-website/assets/img/uwr-logo.svg" height="80px;" onclick="window.open('https://www.math.uni.wroc.pl/', '_blank')">
         <div>
           <h1>Koło Naukowe Matematyków Teoretyków</h1>
           <h3>Uniwersytetu Wrocławskiego</h3>
         </div>
       </div>
 
-      <img src="/assets/img/logo/logo_knmt.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')">
+      <!-- <img src="/knmt-website/assets/img/logo/logo_knmt.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')"> -->
       
       <div class="right_header">
-        <input class="search_bar" type="text" id="search" name="search" value placeholder="Szukaj">
+
+        <div class="search_contact">
+          <a href="">dane kontaktowe</a>
+
+          <input class="search_bar" type="text" id="search" name="search" value placeholder="Szukaj">
+        </div>
+
         <div class="menu_icon_holder">
-          <div><img src="/assets/img/facebook.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')"></div>
-          <div><img src="/assets/img/calendar.svg"></div>
-          <div><a href="">Dane kontaktowe</a></div>
+          <div class="logo_image"><img src="/knmt-website/assets/img/logo/logo_knmt.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')" /></div>
+
+          <div class="socials">
+            <ul>
+              <li><img src="/knmt-website/assets/img/facebook.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')" /></li>
+              <li><img src="/knmt-website/assets/img/calendar.svg" /> </li>
+            </ul>
+          </div>
         </div>
       </div>
 
     </div>
     <div class="button_menu">
-      <button onclick="location.href='/'">Aktualności</button>
-      <button onclick="location.href='/info.html'">Informacje</button>
-      <button onclick="location.href='/calendar.html'">Kalendarz</button>
-      <button onclick="location.href='/join.html'">Dołącz</button>
-      <button onclick="location.href='/wss.html'">Wrocławskie Spotkanie Szkockie</button>
+      <button onclick="location.href='/knmt-website/'">Aktualności</button>
+      <button onclick="location.href='/knmt-website/info.html'">Informacje</button>
+      <button onclick="location.href='/knmt-website/calendar.html'">Kalendarz</button>
+      <button onclick="location.href='/knmt-website/join.html'">Dołącz</button>
+      <button onclick="location.href='/knmt-website/wss.html'">Wrocławskie Spotkanie Szkockie</button>
     </div>
 
     <div class="main_container">
@@ -52,16 +63,28 @@
     </div>
 
     <footer>
-      <div class="foot_search">
-        <h3>Wyszukaj</h3>
-        <input class="search_bar" type="text" id="search" name="search" value placeholder="Szukaj">
+      <div class="info_foot">
+        <div class="foot_search">
+          <h3>Wyszukaj</h3>
+          <input class="search_bar" type="text" id="search" name="search" value placeholder="Szukaj">
+        </div>
+        <div class="foot_contact">
+          <h3>Dane kontaktowe</h3>
+          pl. Grunwaldzki 2<br>
+          50-384 Wrocław<br>
+          POLSKA<br>
+          <a href="mailto:knmt.wmii.uwr@gmail.com">knmt.wmii.uwr@gmail.com</a>
+        </div>
       </div>
-      <div class="foot_contact">
-        <h3>Dane kontaktowe</h3>
-        pl. Grunwaldzki 2<br>
-        50-384 Wrocław<br>
-        POLSKA<br>
-        <a href="mailto:knmt.wmii.uwr@gmail.com">knmt.wmii.uwr@gmail.com</a>
+      <div class="author_foot">
+        <div class="www_auth">
+          <a href="https://github.com/ronia-jakim" class="auth_name">Weronika Jakimowicz</a> <br/>
+          <a href="mailto:weronikajakimowicz2@gmail.com">weronikajakimowicz2@gmail.com</a>
+        </div>
+        <div class="www_auth">
+          <a href="https://github.com/Sileanth" class="auth_name">Łukasz Magnuszewski</a> <br/>
+          <a href="mailto:@gmail.com">historyk2002@gmail.com</a>
+        </div>
       </div>
     </footer>
   </body>

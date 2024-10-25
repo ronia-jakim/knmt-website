@@ -15,69 +15,6 @@ body {
   background-color: $bg;
 }
 
-.main_header {
-  width: 100%;
-  // height: 110px;
-
-  background-color: $bg;
-
-  display: flex;
-  flex-direction: row;
-
-  align-items: center;
-  justify-content: space-between;
-}
-
-.main_header img {
-  cursor: pointer;
-}
-
-.left_header {
-  margin-left: 10%;
-
-  display: flex;
-  flex-direction: row;
-
-  align-items: center;
-}
-
-.left_header img {
-  padding-right: 20px;
-  margin-right: 20px;
-  border-right: 1px solid $blue;
-}
-
-.right_header {
-  margin-right: 10%;
-
-  display: flex;
-  flex-direction: column;
-  justify-items: flex-end;
-  align-items: center;
-  gap: 10px;
-}
-
-.right_header img {
-  height: 30px;
-}
-
-.right_header .search_bar {
-  width: 200px;
-}
-
-.right_header a {
-  font-size: 13px;
-}
-
-.menu_icon_holder {
-  width: 220px;
-  display: flex;
-  flex-direction: row;
-  
-  align-itmes: flex-start;
-  justify-items: space-around;
-}
-
 h1 {
   font-size: 24px;
   font-family: Nunito;
@@ -104,37 +41,17 @@ h3 {
   padding-bottom: 30px;
 }
 
-.button_menu {
-  width: 90%;
-
-  background-color: $button_background;
-  padding-left: 10%;
-
-  display: flex;
-  flex-direction: row;
-}
-
-.button_menu button {
-  border: none;
-
-  height: 50px;
-  // min-width: 120px;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  background-color: $button_background;
-  color: $button_text;
-  
-  font-size: 16px;
+a {
+  text-decoration: none;
+  font-weight: 800;
   font-family: Nunito;
+  color: $subtitle;
 }
 
-.button_menu button:hover {
-  background-color: $button_hover_background;
-  color: $button_text_hover;
-  // font-weight: 700;
-  cursor: pointer;
-}
+
+@import 'header_style';
+@import 'button_menu';
+@import 'footer_style';
 
 .main_container {
   width: 80%;
@@ -143,55 +60,3 @@ h3 {
   padding-bottom: 150px;
 }
 
-footer{
-    width:100%;
-    height: 100px;
-
-    position: absolute;
-    left: 0;
-    bottom: 0; 
-
-    background-color: $blue;
-
-    display: flex;
-    justify-content: center;
-    // align-items: center;
-    gap: 60px;
-
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
-
-footer h3 {
-  color: $fg;
-  font-weight: 800;
-
-  margin: 0px;
-  padding: 0px;
-  padding-bottom: 10px;
-}
-
-.search_bar {
-  padding-left: 25px;
-  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
-  background-size: 20px;
-
-  background-color: $bg;
-
-  width: 300px;
-  height: 25px;
-
-  border: none;
-  border: 1px solid $subtitle;
-}
-
-.foot_contact {
-  font-family: Nunito;
-  font-size: 13px;
-  color: $fg;
-}
-
-a {
-  text-decorations: none;
-  color: $subtitle;
-}
