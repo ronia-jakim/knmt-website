@@ -4,8 +4,20 @@ import frontmatter
 import markdown
 
 from jinja2 import Environment, FileSystemLoader
+from sys import argv
+
 
 import datetime
+
+
+
+
+
+is_github_pages = False
+if "--github-pages" in argv:
+    is_github_pages = True
+
+
 
 
 environment = Environment(loader=FileSystemLoader("src/templates/"))
@@ -31,7 +43,7 @@ for n in chronological_news:
         if 'description' not in meta_data:
             meta_data['description'] = post.content[:100]+"..."
 
-        html_cnt = template.render(f = meta_data)
+        html_cnt = template.render(f = meta_data, github=is_github_pages)
         with open(target_path+n+".html", mode="w", encoding="utf-8") as m:
             m.write(html_cnt)
 
@@ -42,6 +54,8 @@ news_metadata.reverse()
 
 template = environment.get_template("index.html")
 
-html_cnt = template.render(posts = news_metadata[:5])
+html_cnt = template.render(posts = news_metadata[:5], github=is_github_pages)
 with open("build/index.html", mode="w", encoding="utf-8") as m:
     m.write(html_cnt)
+
+
