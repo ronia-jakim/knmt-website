@@ -61,6 +61,13 @@ body {
   height: 30px;
 }
 
+.icon_holder {
+  width: 300px;
+  display:flex;
+  flex-direction:row;
+  justify-items: space-between;
+}
+
 h1 {
   font-size: 24px;
   font-family: Nunito;
@@ -154,7 +161,7 @@ footer h3 {
   padding-bottom: 10px;
 }
 
-footer input {
+.search_bar {
   padding-left: 25px;
   background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
   background-size: 20px;
