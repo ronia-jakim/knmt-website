@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 mkdir -p build
-mkdir -p build/content/news
+# mkdir -p build/content/news
 mkdir -p build/stylesheets
 
-cp -r assets build
+cp -r assets build 
+cp -r content build/content
 
 sass ./src/stylesheets/colors_fonts.scss ./build/stylesheets/colors_fonts.css
 sass ./src/stylesheets/basic-style.scss ./build/stylesheets/basic-style.css

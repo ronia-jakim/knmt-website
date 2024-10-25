@@ -6,13 +6,22 @@
 
 {% block mainText %}
 
+<div class="post_board">
+
 {% for p in posts %}
 <div class="post_box">
-  <div class="post_title" onclick="location.href='{{ p.path }}'">{{ p.title }}</div>
-  <div class="post_date_author">{{ p.date }} {{ p.author }}</div>
-  <p class="description">{{ p.description }}</p>
+  <img src="{{ p.preview_image }}" class="post_img" />
+  <div class="post_info">
+    <div class="post_title" onclick="location.href='{{ p.path }}'">{{ p.title }}</div>
+    <div class="post_date_author">{{ p.date }} {{ p.author }}</div>
+    <p class="description">{{ p.description }}</p>
+  </div>
 </div>
 {% endfor %}
 
+</div>
+
+<div class="side_bar">
+</div>
 
 {% endblock %}

@@ -9,21 +9,16 @@ from sys import argv
 
 import datetime
 
-
-
-
-
 is_github_pages = False
 if "--github-pages" in argv:
     is_github_pages = True
 
-
-
-
 environment = Environment(loader=FileSystemLoader("src/templates/"))
 template = environment.get_template("post.html")
 
-chronological_news = ['bargiela_25X2024.md', 'kandybo_old.md']
+default_img = '/assets/img/referat_preview.jpg'
+
+chronological_news = ['bargiela_25X2024', 'kandybo_old']
 
 news_path = 'content/news/'
 target_path = 'build/content/news/'
@@ -31,20 +26,25 @@ target_path = 'build/content/news/'
 news_metadata = []
 
 for n in chronological_news: 
-    with open(news_path + n) as n_file:
+    with open(news_path + n + '/info.md') as n_file:
         post = frontmatter.load(n_file)
 
         meta_data = post.metadata 
         meta_data['content'] = markdown.markdown(post.content)
-        meta_data['path'] = "content/news/"+n+".html"
+        meta_data['path'] = "content/news/"+n+"/index.html"
 
         meta_data['date'] = datetime.datetime.strptime(meta_data['date'], '%Y.%m.%d').date()
+
+        if 'preview_image' not in meta_data:
+            meta_data['preview_image'] = default_img
+        else:
+            meta_data['preview_image'] = "content/news/"+n+'/'+meta_data['preview_image']
 
         if 'description' not in meta_data:
             meta_data['description'] = post.content[:100]+"..."
 
         html_cnt = template.render(f = meta_data, github=is_github_pages)
-        with open(target_path+n+".html", mode="w", encoding="utf-8") as m:
+        with open(target_path+n+"/index.html", mode="w", encoding="utf-8") as m:
             m.write(html_cnt)
 
         news_metadata.append(meta_data)

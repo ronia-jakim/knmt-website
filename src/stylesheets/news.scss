@@ -2,6 +2,13 @@
 
 .post_box {
   width: 100%;
+
+  min-height: 150px;
+}
+
+.post_info {
+  display: flex;
+  flex-direction: column;
 }
 
 .post_date_author {
@@ -30,4 +37,18 @@
   font-family: Nunito;
   font-size: 16px;
   color: $fg;
+}
+
+.post_board {
+  width: 60%;
+  background-color: red;
+
+}
+
+.side_bar {
+  height: 100px;
+  background-color: green;
+
+  width: 30%;
+  margin-left: 10%;
 }
