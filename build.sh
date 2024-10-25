@@ -12,4 +12,6 @@ sass ./src/stylesheets/news.scss ./build/stylesheets/news.css
 
 ./src/pytong/build_main.py
 
+cp -r ./build ./knmt-website
+
 # python -m flask --app ./src/pytong/build_main.py run --debug
