@@ -61,14 +61,21 @@ body {
   height: 30px;
 }
 
+.right_header .search_bar {
+  width: 200px;
+}
+
+.right_header a {
+  font-size: 13px;
+}
+
 .menu_icon_holder {
-  width: 300px;
-  display:flex;
-  flex-direction:row;
-  justify-items: flex-end;
-  align-items: flex-end;
-  align-content: flex-end;
-  gap: 20px;
+  width: 220px;
+  display: flex;
+  flex-direction: row;
+  
+  align-itmes: flex-start;
+  justify-items: space-around;
 }
 
 h1 {
