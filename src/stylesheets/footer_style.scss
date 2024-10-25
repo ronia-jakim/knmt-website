@@ -31,7 +31,7 @@ footer h3 {
 
 .foot_search {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .info_foot {
@@ -44,16 +44,21 @@ footer h3 {
 
   justify-content: center;
 }
+
+.info_foot img {
+  cursor: pointer;
+}
+
 .author_foot {
   width: 100%;
 
   margin-bottom: 0px;
   padding: 0px;
 
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
 
-  background-color: $purple;
+  background-color: $subtitle;
   display: flex;
   flex-direction: row;
 
@@ -69,7 +74,17 @@ footer h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
+}
+
+.www_auth a {
+  font-size: 12px;
+  color: $blue;
+  font-weight: 500;
+}
+
+.auth_name {
+  color: $bg !important;
+  font-weight: 800;
 }
 
 .search_bar {
