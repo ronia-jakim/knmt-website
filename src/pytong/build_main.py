@@ -6,7 +6,7 @@ import markdown
 from jinja2 import Environment, FileSystemLoader
 
 import datetime
-        
+
 
 environment = Environment(loader=FileSystemLoader("src/templates/"))
 template = environment.get_template("post.html")
