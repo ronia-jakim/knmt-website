@@ -1,0 +1,36 @@
+# Global options
+{
+    admin off  # Disable admin interface for security
+    auto_https off  # Disable automatic HTTPS since we're running locally
+}
+
+# Server block
+:8080 {
+    # Log settings
+    log {
+        output stdout
+        format console
+        level INFO
+    }
+
+    # Handle path prefix
+    handle /knmt-website/* {
+        # Remove the prefix before serving files
+        uri strip_prefix /knmt-website
+
+        # Serve static files from build directory
+        root * ./build
+        try_files {path} {path}/ /index.html
+        file_server {
+            browse  # Enable directory listing
+        }
+    }
+
+    # Redirect root to prefixed path
+    redir / /knmt-website/
+
+    # Handle errors
+    handle_errors {
+        respond "{err.status_code} {err.status_text}" 
+    }
+}
