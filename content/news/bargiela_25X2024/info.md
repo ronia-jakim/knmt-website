@@ -3,7 +3,7 @@
     author: 'Dominik Bargieła'
     date: '2024.10.25'
     time: '14:30'
-    preview_image: 'assets/img/referat_preivew.jpg'
+    preview_image: 'kot.jpg'
     description: 'testowe description'
 ---
 
