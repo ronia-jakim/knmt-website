@@ -7,7 +7,7 @@
   background-color: $bg;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   align-items: center;
   justify-content: space-between;
@@ -18,7 +18,11 @@
 }
 
 .left_header {
+  width: 90%;
+
+  margin-top: -20px;
   margin-left: 10%;
+  margin-bottom: 20px;
 
   display: flex;
   flex-direction: row;
@@ -32,67 +36,21 @@
   border-right: 1px solid $blue;
 }
 
-.right_header {
-  margin-right: 10%;
-}
-
-.menu_icon_holder {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-
-  justify-content: flex-end;
-  align-items: center;
-}
-
 .search_contact {
-  width: 100%;
+  width: 90%;
+
+  margin-right: 10%;
+  margin-top: 10px;
+
   display: flex;
   flex-direction: row;
+
   justify-content: flex-end;
   align-items: center;
+
   gap: 20px;
 }
 
-.logo_image img {
-  height: 80px;
-}
-
-.socials {
-  display: flex;
-  flex-direction: column;
-}
-
-ul {
-  list-style: none;
-}
-
-ul img {
+.search_contact img {
   height: 32px;
 }
-
-// .right_header {
-//   margin-right: 10%;
-//
-//   display: flex;
-//   flex-direction: column;
-//   justify-items: flex-end;
-//   align-items: center;
-//   gap: 10px;
-// }
-//
-// .right_header img {
-//   height: 30px;
-// }
-//
-// .right_header .search_bar {
-//   width: 200px;
-// }
-//
-// .right_header a {
-//   font-size: 13px;
-// }
-//
-// .menu_icon_holder {
-// }
-//
