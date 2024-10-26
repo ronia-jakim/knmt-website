@@ -5,6 +5,8 @@ html {
 
   width: 100%;
   min-height: 100vh;
+  
+  font-family: Nunito;
 }
 
 body {
@@ -17,7 +19,6 @@ body {
 
 h1 {
   font-size: 24px;
-  font-family: Nunito;
   font-weight: 800;
 
   color: $fg;
@@ -27,9 +28,17 @@ h1 {
   margin-top: 25px;
 }
 
+h2 {
+  color: $subtitle;
+
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
 h3 {
   font-size: 16px;
-  font-family: Nunito;
   font-weight: 500;
 
   color: $subtitle;
@@ -41,10 +50,18 @@ h3 {
   padding-bottom: 30px;
 }
 
+h4 {
+  margin: 0;
+  padding: 0;
+
+  color: $blue;
+
+  font-size: 15px;
+}
+
 a {
   text-decoration: none;
   font-weight: 800;
-  font-family: Nunito;
   color: $subtitle;
 }
 
@@ -59,15 +76,24 @@ a {
   margin-top: 20px;
   padding-bottom: 200px;
 
-  font-family: Nunito;
   font-size: 16px;
   color: $fg;
 }
 
-.row_100 {
+.flexrow_100 {
   width: 100%;
 
   display: flex;
   flex-direction: row;
+
+  gap: 20px;
 }
 
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}

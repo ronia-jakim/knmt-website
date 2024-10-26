@@ -1,22 +1,22 @@
 {% extends "base.html" %}
 
 {% block moreCSS %}
-<link rel="stylesheet" href="stylesheets/news.css">
+<link rel="stylesheet" href="/stylesheets/news.css">
 {% endblock %}
 
 {% block mainText %}
 
-<div class="news_container">
+<div class="flexrow_100">
 
-<div class="post_board">
+<div class="flexcolumn post_board">
 
 {% for p in posts %}
-<div class="post_box">
+<div class="flexrow_100">
   <img src="{{ p.preview_image }}" class="post_img" onclick="location.href='{{ p.path }}'" />
-  <div class="post_info">
-    <div class="post_title" onclick="location.href='{{ p.path }}'">{{ p.title }}</div>
-    <div class="post_date_author">{{ p.date }} {{ p.author }}</div>
-    <p class="description">{{ p.description }}</p>
+  <div class="flexcolumn">
+    <h2 onclick="location.href='{{ p.path }}'" class="cursor_pointer">{{ p.title }}</h2>
+    <h4>{{ p.date }} {{ p.author }}</h4>
+    <p>{{ p.description }}</p>
   </div>
 </div>
 {% endfor %}
@@ -24,6 +24,7 @@
 </div>
 
 <div class="side_bar">
+  tutaj będzie kalendarz
 </div>
 
 </div>

@@ -1,57 +1,9 @@
 @import 'colors_fonts';
 
 .post_box {
-  width: 100%;
-
-  display: flex;
-  flex-direction: row;
-
   gap: 20px;
 
   min-height: 200px;
-}
-
-.post_info {
-  display: flex;
-  flex-direction: column;
-}
-
-.post_date_author {
-  width: 30%;
-  
-  font-family: Nunito;
-  font-size: 14px;
-
-  color: $blue;
-}
-
-.post_title {
-  font-family: Nunito;
-  font-size: 18px;
-  font-weight: 800;
-
-  color: $subtitle;
-}
-
-.post_title:hover {
-  color: $purple;
-  cursor: pointer;
-}
-
-.description {
-  font-family: Nunito;
-  font-size: 16px;
-  color: $fg;
-}
-
-.post_board {
-  width: 60%;
-
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  // background-color: red;
-
 }
 
 .post_img {
@@ -63,20 +15,33 @@
   cursor: pointer;
 }
 
-.news_container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
 
 .side_bar {
-  min-height: 100%;
-
-  // background-color: green;
-
-  width: 35%;
-  margin-left: 5%;
-
-  boder-left: 10px solid;
-  padding-left: 5%;
+  display: none;
 }
+
+.post_board {
+  gap: 15px;
+
+  width: 100%;
+}
+
+@media all and (min-width: 1200px) {
+  .side_bar {
+    display: block;
+    height: 100px;
+
+    width: 300px;
+
+    boder-left: 10px solid;
+    padding-left: 5%;
+  }
+  .post_board {
+    margin-right: 30px;
+    width: calc(100% - 330px);
+
+    gap: 15px;
+  }
+
+}
+
