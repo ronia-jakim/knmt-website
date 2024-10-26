@@ -13,6 +13,8 @@ environment = Environment(loader=FileSystemLoader("src/templates/"))
 
 import build_post 
 import build_index 
+import build_info 
 
 news_metadata = build_post.build_post_pages(environment)
 build_index.build_index_pages(environment, news_metadata)
+build_info.build_information(environment)
