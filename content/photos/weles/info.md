@@ -1,3 +1,3 @@
 ---
-    title: 'Weles królem'
+    album_title: 'Weles królem'
 ---

@@ -1,4 +1,4 @@
 ---
-    title: 'Ultann kot Moniki Brattig (TM)'
+    album_title: 'Ultann kot Moniki Brattig (TM)'
     preview: 'u.jpg'
 ---
