@@ -1,0 +1,23 @@
+.album_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+  // background-color: red;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.album a {
+  font-size: 20px;
+}

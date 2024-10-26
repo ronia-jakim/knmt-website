@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 
 {% block moreCSS %}
+<link rel="stylesheet" href="stylesheets/photos.css">
 {% endblock %}
 
 {% block mainText %}
 
-  <div>
+  <div class="album_container">
   {% for ph in photo_lst %}
-  <div>
+  <div class="album">
     <img width="300" style="cursor: pointer; width: 300px; height: 200px; object-fit: cover;" src="{{ ph.preview }}" alt="{{ ph.alt }}" onclick="location.href='{{ ph.album_path }}'">
     <a href="{{ ph.album_path }}">{{ ph.album_title }}</a>
   </div>
