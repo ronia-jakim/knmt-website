@@ -6,15 +6,14 @@ import markdown
 from jinja2 import Environment, FileSystemLoader
 from sys import argv
 
-
 import datetime
 
-is_github_pages = False
-if "--github-pages" in argv:
-    is_github_pages = True
-
+# setting up jinja with template directory
 environment = Environment(loader=FileSystemLoader("src/templates/"))
 template = environment.get_template("post.html")
+
+
+
 
 default_img = '/assets/img/referat_preview.jpg'
 
