@@ -39,11 +39,14 @@ def build_post_pages (environment):
             p_info['preview_image'] = default_img 
         else: 
             # preview image set, adjust its path 
-            p_info['preview_image'] = target_path + p_info['preview_image']
+            p_info['preview_image'] = content_dir + p_info['preview_image']
 
         # add description if not set
         if 'description' not in p_info:
             p_info['description'] = post.content[:100]+"..."
+
+        # save path to post website
+        p_info['path'] = content_dir + p + "/index.html"
 
         html_cnt = template.render(f = p_info)
         with open(target_path + p + "/index.html", mode="w", encoding="utf-8") as m:
