@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 
 {% block moreCSS %}
+<link rel="stylesheet" href="stylesheets/photos.css">
 {% endblock %}
 
 {% block mainText %}
 
-  <div>
+  <div class="photo_container">
   {% for ph in photo_lst %}
-  <div>
     <img style="max-width: 500px;" src="{{ ph }}">
-  </div>
   {% endfor %}
   </div>
 
