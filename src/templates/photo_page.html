@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 
 {% block moreCSS %}
-<link rel="stylesheet" href="stylesheets/photos.css">
 {% endblock %}
 
 {% block mainText %}
 
-  <div class="photo_container">
+  <div class="flexrow_100" style="flex-wrap: wrap; gap:20px; justify-content: center;">
   {% for ph in photo_lst %}
     <img style="max-width: 500px;" src="{{ ph }}">
   {% endfor %}

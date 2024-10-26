@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block moreCSS %}
-<link rel="stylesheet" href="/stylesheets/post.css">
 {% endblock %}
 
 {% block mainText %}
@@ -11,6 +10,8 @@
   <h2>{{ f.author }}</h2>
 {% endif %}
 <h3>{{ f.date }} godz. {{ f.time }}</h3>
+
+<img style="max-height: 300px; object-fit: cover;" src="{{ f.preview_image }}">
 
 <div class="cnt">
   {{ f.content }}
