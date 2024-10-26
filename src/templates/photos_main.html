@@ -5,11 +5,13 @@
 
 {% block mainText %}
 
+  <div>
   {% for ph in photo_lst %}
   <div>
-    <img src="{{ ph.preview }}" alt="{{ ph.alt }}" onclick="location.href='{{ ph.album_path }}'">
+    <img width="300" style="cursor: pointer; width: 300px; height: 200px; object-fit: cover;" src="{{ ph.preview }}" alt="{{ ph.alt }}" onclick="location.href='{{ ph.album_path }}'">
     <a href="{{ ph.album_path }}">{{ ph.album_title }}</a>
   </div>
   {% endfor %}
+  </div>
 
 {% endblock %}

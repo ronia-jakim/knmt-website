@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block moreCSS %}
+{% endblock %}
+
+{% block mainText %}
+
+  <div>
+  {% for ph in photo_lst %}
+  <div>
+    <img style="max-width: 500px;" src="{{ ph }}">
+  </div>
+  {% endfor %}
+  </div>
+
+{% endblock %}
