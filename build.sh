@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+rm -rf build
+
 mkdir -p build
 # mkdir -p build/content/news
 mkdir -p build/stylesheets
@@ -17,9 +19,5 @@ if [[ " $* " == *" --github-pages "* ]]; then
 else
   ./src/pytong/build_main.py 
 fi
-
-
-
-cp -r ./build ./knmt-website
 
 # python -m flask --app ./src/pytong/build_main.py run --debug
