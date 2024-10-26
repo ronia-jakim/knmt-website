@@ -39,7 +39,7 @@ def build_post_pages (environment):
             p_info['preview_image'] = default_img 
         else: 
             # preview image set, adjust its path 
-            p_info['preview_image'] = content_dir + p_info['preview_image']
+            p_info['preview_image'] = content_dir + p + "/" + p_info['preview_image']
 
         # add description if not set
         if 'description' not in p_info:
