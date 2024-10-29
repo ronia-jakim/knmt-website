@@ -6,6 +6,8 @@ mkdir -p build
 # mkdir -p build/content/news
 mkdir -p build/stylesheets
 
+mkdir build/books build/info
+
 cp -r assets build 
 cp -r content build/content
 

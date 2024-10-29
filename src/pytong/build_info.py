@@ -8,5 +8,5 @@ def build_information(environment):
         i = frontmatter.load(f) 
 
         html_cnt = template.render(p = i)
-    with open("build/info.html", mode="w", encoding="utf-8") as m:
+    with open("build/info/index.html", mode="w", encoding="utf-8") as m:
         m.write(html_cnt)

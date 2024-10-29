@@ -17,7 +17,7 @@ def build_main_photos(environment):
     template = environment.get_template("photos_main.html")
 
     html_cnt = template.render(photo_lst = album_info)
-    with open("build/photos.html", mode="w", encoding="utf-8") as m:
+    with open("build/content/photos/index.html", mode="w", encoding="utf-8") as m:
         m.write(html_cnt)
 
 def build_album_pages(environment, album_lst):
@@ -37,12 +37,12 @@ def build_album_pages(environment, album_lst):
         img_list = list( filter( lambda x : x[-3:] != '.md', img_list) )
 
         if 'preview' in a_info:
-            a_info['preview'] = photo_path + a + '/' + a_info['preview']
+            a_info['preview'] = "/"+ photo_path + a + '/' + a_info['preview']
         else:
-            a_info['preview'] = photo_path + a + '/' + img_list[0]
+            a_info['preview'] = "/" +photo_path + a + '/' + img_list[0]
 
         
-        a_info['album_path'] = 'content/photos/' + a + '/index.html'
+        a_info['album_path'] = '/content/photos/' + a
 
         album_meta_data.append(a_info)
 
