@@ -46,7 +46,7 @@ def build_post_pages (environment):
             p_info['description'] = post.content[:100]+"..."
 
         # save path to post website
-        p_info['path'] = content_dir + p + "/index.html"
+        p_info['path'] = content_dir + p # + "/index.html"
 
         html_cnt = template.render(f = p_info)
         with open(target_path + p + "/index.html", mode="w", encoding="utf-8") as m:
