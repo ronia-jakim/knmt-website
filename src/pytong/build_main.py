@@ -18,12 +18,32 @@ import build_photos
 import build_books
 import build_calendar
 
-news_metadata = build_post.build_post_pages(environment)
-build_index.build_index_pages(environment, news_metadata)
-build_info.build_information(environment)
+news_metadata = []
 
-build_photos.build_main_photos(environment)
+try:
+    news_metadata = build_post.build_post_pages(environment)
+except:
+    print("error building post pages")
+try:
+    build_index.build_index_pages(environment, news_metadata)
+except:
+    print("error building main page")
+try:
+    build_info.build_information(environment)
+except:
+    print("error building information page")
 
-build_books.build_book_list(environment)
+try:
+    build_photos.build_main_photos(environment)
+except:
+    print("error building photo pages")
 
-build_calendar.build_conf(environment)
+try:
+    build_books.build_book_list(environment)
+except:
+    print("error building book list")
+
+try:
+    build_calendar.build_conf(environment)
+except:
+    print("error building event page")
