@@ -12,7 +12,9 @@
 
 {% for p in posts %}
 <div class="flexrow_100">
-  <img src="{{ p.preview_image }}" class="post_img" onclick="location.href='{{ p.path }}'" />
+  <div style="width: 250px;">
+    <img src="{{ p.preview_image }}" class="post_img" onclick="location.href='{{ p.path }}'" />
+  </div>
   <div class="flexcolumn">
     <h2 onclick="location.href='{{ p.path }}'" class="cursor_pointer">{{ p.title }}</h2>
     <h4>{{ p.date }} {{ p.author }}</h4>

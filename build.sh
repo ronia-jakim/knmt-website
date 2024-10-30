@@ -6,7 +6,7 @@ mkdir -p build
 # mkdir -p build/content/news
 mkdir -p build/stylesheets
 
-mkdir build/books build/info
+mkdir build/books build/info build/calendar
 
 cp -r assets build 
 cp -r content build/content
@@ -15,6 +15,7 @@ cp -r content build/content
 sass ./src/stylesheets/basic-style.scss ./build/stylesheets/basic-style.css
 sass ./src/stylesheets/news.scss ./build/stylesheets/news.css
 sass ./src/stylesheets/photos.scss ./build/stylesheets/photos.css
+sass ./src/stylesheets/calendar.scss ./build/stylesheets/calendar.css
 
 
 if [[ " $* " == *" --github-pages "* ]]; then
