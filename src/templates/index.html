@@ -23,6 +23,14 @@
 </div>
 {% endfor %}
 
+<div class="flexrow_100">
+  <a href="{{ prev }}">prev</a>
+  {% for p in pages %}
+  <a href="{{ p.url }}">{{ p.number }}</a>
+  {% endfor %}
+  <a href="{{ nxt }}">next</a>
+</div>
+
 </div>
 
 <div class="side_bar">

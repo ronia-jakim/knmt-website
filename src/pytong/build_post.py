@@ -18,6 +18,7 @@ def build_post_pages (environment):
 
     default_img = '/assets/img/referat_preview.jpg'
 
+
     # set jinja template
     template = environment.get_template("post.html")
     
@@ -29,10 +30,16 @@ def build_post_pages (environment):
         p_info = post.metadata
         
         # parse markdown in info.md file as html
-        p_info['content'] = markdown.markdown(post.content)
+        try:
+            p_info['content'] = markdown.markdown(post.content)
+        except:
+            print(p + " failed to make post page")
 
         # parse the date from string to date object
-        p_info['date'] = datetime.datetime.strptime(p_info['date'], '%Y.%m.%d').date()
+        try:
+            p_info['date'] = datetime.datetime.strptime(p_info['date'], '%Y.%m.%d').date()
+        except:
+            print("failed to convert date for post " + p)
     
         if 'preview_image' not in p_info: 
             # no preview image set, use the default 
@@ -48,9 +55,13 @@ def build_post_pages (environment):
         # save path to post website
         p_info['path'] = content_dir + p # + "/index.html"
 
-        html_cnt = template.render(f = p_info)
-        with open(target_path + p + "/index.html", mode="w", encoding="utf-8") as m:
-            m.write(html_cnt)
+        try:
+            html_cnt = template.render(f = p_info)
+            with open(target_path + p + "/index.html", mode="w", encoding="utf-8") as m:
+                m.write(html_cnt)
+        except:
+            print("failed to write on html file for " + p)
+
     
         news_metadata.append(p_info)
 
