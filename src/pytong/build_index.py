@@ -11,8 +11,12 @@ def build_index_pages(environment, news_metadata):
     all_pages = []
 
     while i <= math.ceil(meta_len/5):
+        u = f"index{i}.html"
+        if i == 1:
+            u = "/"
+
         all_pages.append({
-            "url": f"/index{i}.html",
+            "url": u,
             "number": i 
             })
         i += 1 
