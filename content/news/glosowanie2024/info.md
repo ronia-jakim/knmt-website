@@ -1,6 +1,6 @@
 ---
-title:'Wybory do KNMT - głosowanie'
-date:'2024.11.04'
+title: 'Wybory do KNMT - głosowanie'
+date: '2024.11.04'
 preview_image: 'wybory.png'
 description: 'Drodzy członkowie, do piątku 8 XI do godziny 23:59 można oddać głoś na kandydatów do zarządu KNMT.'
 ---
