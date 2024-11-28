@@ -1,6 +1,6 @@
 ---
-   prezes: 'Michał Mądrala'
-   wice: 'Maciej Frącek'
-   sekretarz: 'Krzysztof Szymański'
-   skarbnik: 'Jakub Krzysztoń'
+   prezes: 'Bartosz Szachniewicz'
+   wice: 'Michał Mądrala'
+   skarbnik: 'Krzysztof Szymański'
+   sekretarz: 'Weronika Jakimowicz'
 ---
