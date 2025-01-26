@@ -1,3 +1,4 @@
 build/
 knmt-website/
 __pycache__/
+venv/
