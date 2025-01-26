@@ -74,6 +74,24 @@ a {
   cursor: pointer;
 }
 
+.wss_button {
+  border: none;
+  cursor: pointer;
+
+  padding: 20px 40px;
+
+  background-color: $subtitle;
+  color: $bg;
+
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.wss_button:hover {
+  background-color: $blue;
+  color: $fg;
+}
+
 
 @import 'header_style';
 @import 'button_menu';

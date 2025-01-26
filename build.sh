@@ -20,10 +20,10 @@ sass ./src/stylesheets/photos.scss ./build/stylesheets/photos.css
 sass ./src/stylesheets/calendar.scss ./build/stylesheets/calendar.css
 
 
-if [[ " $* " == *" --github-pages "* ]]; then
-  ./src/pytong/build_main.py --github-pages
-else
-  ./src/pytong/build_main.py 
-fi
+# if [[ " $* " == *" --github-pages "* ]]; then
+#   ./src/pytong/build_main.py --github-pages
+# else
+./src/pytong/build_main.py 
+# fi
 
 # python -m flask --app ./src/pytong/build_main.py run --debug

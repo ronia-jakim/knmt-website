@@ -47,3 +47,20 @@ try:
     build_calendar.build_conf(environment)
 except:
     print("error building event page")
+
+import build_wss
+
+try:
+    build_wss.build_wss_index(environment)
+except:
+    print("error building wss mainpage")
+
+try:
+    build_wss.build_wss_registration(environment)
+except:
+    print("error building wss registration page")
+
+try:
+    build_wss.build_wss_programme(environment)
+except:
+    print("error building wss programme page")
