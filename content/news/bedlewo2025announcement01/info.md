@@ -14,8 +14,7 @@ Serdecznie zapraszamy na Letnią Szkołę Matematyczną Baby Steps Beyond the Ho
 
 🎓 **Dla kogo?** Dla studentów matematyki i pokrewnych kierunków – zarówno licencjackich, jak i magisterskich.
 
-### Co na Was czeka?
-
+## Co na Was czeka?
 ✅ 15 wykładów prowadzonych przez doświadczonych prelegentów.
 
 ✅ Sesje referatowe i posterowe – doskonała okazja do zaprezentowania własnych badań.
