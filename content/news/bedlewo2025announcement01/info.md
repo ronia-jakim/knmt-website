@@ -1,5 +1,5 @@
 ---
-title: 'Wybory do KNMT - głosowanie'
+title: 'Baby Steps Beyond the Horizon - Będlewo 2025'
 date: '2025.04.03'
 preview_image: 'logo.png'
 description: '📢 Ogłoszenie: Letnia Szkoła Matematyczna Baby Steps Beyond the Horizon!'
