@@ -18,5 +18,6 @@ Prosimy Was zatem o:
 1. Wypełnienie [formularza](https://docs.google.com/forms/d/e/1FAIpQLSe0ZdLbKe6i0Z7kAIKtsBfi4TwrMeP3oCu6cW0hVQ3GDoNmuw/viewform) dot. członkowstwa w Kole, wraz ze wskazaniem Waszej [dostępności](https://www.when2meet.com/?29923710-Mtx9s) na walne zebranie (wpiszcie się proszę pod własnym imieniem i nazwiskiem). Chcielibyśmy zorganizować je w tygodniu 7-11 IV, po nim jest niewiele czasu, aby uniknąć skreślenia Koła z listy. Będziewmy wdzięczni za wypełnienie dostępności do końca weekendu.
 2. Jeśli jesteście zainteresowani kandydowaniem do Zarządu, zgłoszenie się w osobnym [formularzu](https://docs.google.com/forms/d/e/1FAIpQLSfJLBrKKd3j_XQO62ehf0Mj-xH47LOSf4lIX7CIDPAm0rmsmw/viewform?usp=dialog).
 
-Pozdrawiam
+Pozdrawiam,
+
 Krzysztof Szymański
