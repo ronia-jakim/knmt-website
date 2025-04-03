@@ -29,10 +29,10 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
 4. Niech $K$ będzie ciałem, $\mathbb{F} \subseteq K$ ciałem prostym. Dowieść, że jeśli $\hat{\mathbb{F}} \prec K$, to $K$ jest alg. domknięte.
 5. Niech $K$ będzie ciałem minimalnym, $char K = p$. Dowieść następujących stwierdzeń:
     - Jeśli $L$ jest definiowalnym podciałem ciała $K$, to
-        a. dla $p = 0$, $L = \{0\}$ lub $L = K$.
-        b. dla $p > 0$, $L$ : skończone lub $L = K$.
+        - dla $p = 0$, $L = \{0\}$ lub $L = K$.
+        - dla $p > 0$, $L$ : skończone lub $L = K$.
     - Niech $Aut_{\text{def}}(K) = $ zbiór definiowalnych automorfizmów ciała $K$
-        a. dla $p = 0$, $Aut_{\text{def}}(K) = \{id\}$.
-        b. dla $p > 0$, $Aut_{\text{def}}(K) \hookrightarrow Gal(\hat{\mathbb{F}}_p/\mathbb{F}_p)$ i grupa $Aut_{\text{def}}(K)$ jest nieskończona.
+        - dla $p = 0$, $Aut_{\text{def}}(K) = \{id\}$.
+        - dla $p > 0$, $Aut_{\text{def}}(K) \to Gal(\hat{\mathbb{F}}_p/ \mathbb{F}_p)$ i grupa $Aut_{\text{def}}(K)$ jest nieskończona.
 
 
