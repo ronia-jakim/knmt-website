@@ -30,5 +30,7 @@ Nie przegap okazji, aby zgłębić fascynujące zagadnienia matematyczne i nawi�
 
 Do zobaczenia! 🎉
 
+<img src="plakat.png" width="500px" alt="plakat Baby Steps">
+
 ![plakat Baby Steps](plakat.png)
 
