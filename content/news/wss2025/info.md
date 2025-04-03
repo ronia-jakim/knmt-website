@@ -15,11 +15,11 @@ Podczas konferencji odbyły się warsztaty poświęcone analizie harmonicznej or
 
 Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konferencji – szczególne podziękowania kierujemy do Dziekana prof. Buraczewskiego za wsparcie oraz do wolontariuszy, bez których zaangażowania wydarzenie nie mogłoby się odbyć. Mamy nadzieję, że przyszłoroczna edycja spotka się z równie dużym zainteresowaniem!
 
-✏ Zadania z analizy harmonicznej:
+✏ Zadania z analizy harmonicznej (Mateusz Kwaśnicki):
 
 [coming soon]
 
-✏ Zadania z logiki i teorii modeli:
+✏ Zadania z logiki i teorii modeli (Krzysztof Krupiński):
 
 1. $G$ : grupa minimalna $\implies G/Z(G)$ : grupa minimalna z trywialnym centrem.
 2. $G$ : grupa minimalna, abelowa $\implies (1) \;\vee\;(2)$, gdzie:
