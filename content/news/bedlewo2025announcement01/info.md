@@ -1,6 +1,6 @@
 ---
 title: 'Wybory do KNMT - głosowanie'
-date: '2024.11.04'
+date: '2025.04.03'
 preview_image: 'logo.png'
 description: '📢 Ogłoszenie: Letnia Szkoła Matematyczna Baby Steps Beyond the Horizon!'
 ---
