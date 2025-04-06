@@ -18,9 +18,9 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
 ✏ Zadania z analizy harmonicznej (Mateusz Kwaśnicki, Politechnika Wrocławska):
 
 1. Wykaż, że w wymiarze $n \ge 2$ operator maksymalny Hardy'ego--Littlewooda
-    $$M f(x) = \sup \{\frac{1}{|B|} \int_B |f(y)| dy : \text{$B$ --- kula zawierająca $x$}\}$$
+    $$M f(x) = \sup \{ \frac{1}{|B|} \int_B |f(y)| dy : \text{$B$ --- kula zawierająca $x$} \}$$
     również można oszacować przy pomocy pewnych przesunięć operatora diadycznego
-    $$M_\Delta f(x) = \sup \{\frac{1}{|Q|} \int_Q |f(y)| dy : \text{$Q$ --- diadyczna kostka zawierająca $x$}\}$$
+    $$M_\Delta f(x) = \sup \{ \frac{1}{|Q|} \int_Q |f(y)| dy : \text{$Q$ --- diadyczna kostka zawierająca $x$} \}$$
 
     Wyznacz uzyskaną w ten sposób stałą w nierówności maksymalnej
     $$|\{M f \ge \lambda\}| \le \frac{C_n}{\lambda} \int_{\mathbb{R}^n} |f(y)| dy .$$
@@ -29,6 +29,12 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
     $$M_\mu f(x) = \sup_{r > 0} \frac{1}{\mu(B(x, r))} \int_{B(x, r)} |f(y)| \mu(dy) .$$
     Czy $M_\mu$ spełnia nierówność maksymalną
     $$\mu\{M_\mu f \ge \lambda\} \le \frac{C_\mu}{\lambda} \int_X |f(y)| \mu(dy)?$$
+4. Jeśli $X_n$ jest nieujemnym martyngałem oraz
+    $$X_N^\star = \max\{X_0, X_1, \ldots, X_N\}, $$
+    to dla $\lambda > 0$ wykazaliśmy mocniejszą wersję nierówności Dooba:
+    $$\pr\bigl[X_N^\star \ge \lambda\bigr] \le \frac{1}{\lambda} \, \ex\bigl[X_N \ind_{\{X_N^\star \ge \lambda\}}\bigr] .$
+    Wywnioskuj, że dla $p \in (1, \infty)$ mamy
+    $$ \ex\bigl[(X_N^\star)^p\bigr] & \le \biggl(\frac{p}{p - 1}\biggr)^p \ex\bigl[(X_N)^p\bigr] .$$
 
 ✏ Zadania z logiki i teorii modeli (Krzysztof Krupiński, Uniwersytet Wrocławski):
 
@@ -44,9 +50,7 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
         - dla $p > 0$, $L$ : skończone lub $L = K$.
     - Niech $Aut_{\text{def}}(K) = $ zbiór definiowalnych automorfizmów ciała $K$
         - dla $p = 0$, $Aut_{\text{def}}(K) = \{id\}$.
-        - dla $p > 0$, $Aut_{\text{def}}(K) \to Gal(\hat{\mathbb{F}}_p / \mathbb{F}_p)$ 
-
-        i grupa 
+        - dla $p > 0$, $Aut_{\text{def}}(K) \to Gal(\hat{\mathbb{F}}_p / \mathbb{F}_p$ i grupa 
 
         $Aut_{\text{def}}(K)$ 
 
