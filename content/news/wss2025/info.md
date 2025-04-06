@@ -23,7 +23,7 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
     $$M_\Delta f(x) = \sup \left\{\frac{1}{|Q|} \int_Q |f(y)| dy : \text{$Q$ --- diadyczna kostka zawierająca $x$}\right\}$$
 
     Wyznacz uzyskaną w ten sposób stałą w nierówności maksymalnej
-    $$|\{M f \ge \lambda\}| & \le \frac{C_n}{\lambda} \int_{\R^n} |f(y)| dy .$$
+    $$|\{M f \ge \lambda\}| \le \frac{C_n}{\lambda} \int_{\R^n} |f(y)| dy .$$
 
 ✏ Zadania z logiki i teorii modeli (Krzysztof Krupiński, Uniwersytet Wrocławski):
 
