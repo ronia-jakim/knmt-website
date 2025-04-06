@@ -35,6 +35,8 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
     $$\mathbb{P}\bigl[X_N^\star \ge \lambda\bigr] \le \frac{1}{\lambda} \, \mathbb{E}\bigl[X_N \mathbb{1}_{\{X_N^\star \ge \lambda\}}\bigr] .$$
     Wywnioskuj, że dla $p \in (1, \infty)$ mamy
     $$ \mathbb{E}\bigl[(X_N^\star)^p\bigr] & \le \biggl(\frac{p}{p - 1}\biggr)^p \mathbb{E}\bigl[(X_N)^p\bigr] .$$
+5. Udowodnij, że dla $p \in (1, \infty]$ zachodzi
+    $$\|M f\|_p & \le C_{n,p} \|f\|_p .$$
 
 ✏ Zadania z logiki i teorii modeli (Krzysztof Krupiński, Uniwersytet Wrocławski):
 
