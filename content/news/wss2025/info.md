@@ -62,8 +62,11 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
         - dla $p = 0$, $L = \{0\}$ lub $L = K$.
         - dla $p > 0$, $L$ : skończone lub $L = K$.
     - Niech $Aut_{\text{def}}(K) = $ zbiór definiowalnych automorfizmów ciała $K$
-        - dla $p = 0$, $Aut_{\text{def}}(K) = \{id\}$.
-        - dla $p > 0$, $Aut_{\text{def}}(K) \to Gal(\hat{\mathbb{F}}_p / \mathbb{F}_p)$ i grupa $Aut_{\text{def}}(K)$ 
+        - dla $p = 0$, 
+        $$Aut_{\text{def}}(K) = \{id\}.$$
+        - dla $p > 0$, 
+        $$Aut_{\text{def}}(K) \to Gal(\hat{\mathbb{F}}_p / \mathbb{F}_p)$$
+        i grupa $Aut_{\text{def}}(K)$ 
 
         jest nieskończona.
 
