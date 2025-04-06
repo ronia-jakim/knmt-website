@@ -32,9 +32,9 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
 4. Jeśli $X_n$ jest nieujemnym martyngałem oraz
     $$X_N^\star = \max\{X_0, X_1, \ldots, X_N\}, $$
     to dla $\lambda > 0$ wykazaliśmy mocniejszą wersję nierówności Dooba:
-    $$\pr\bigl[X_N^\star \ge \lambda\bigr] \le \frac{1}{\lambda} \, \ex\bigl[X_N \ind_{\{X_N^\star \ge \lambda\}}\bigr] .$
+    $$\mathbb{P}\bigl[X_N^\star \ge \lambda\bigr] \le \frac{1}{\lambda} \, \mathbb{E}\bigl[X_N \mathbb{1}_{\{X_N^\star \ge \lambda\}}\bigr] .$
     Wywnioskuj, że dla $p \in (1, \infty)$ mamy
-    $$ \ex\bigl[(X_N^\star)^p\bigr] & \le \biggl(\frac{p}{p - 1}\biggr)^p \ex\bigl[(X_N)^p\bigr] .$$
+    $$ \mathbb{E}\bigl[(X_N^\star)^p\bigr] & \le \biggl(\frac{p}{p - 1}\biggr)^p \mathbb{E}\bigl[(X_N)^p\bigr] .$$
 
 ✏ Zadania z logiki i teorii modeli (Krzysztof Krupiński, Uniwersytet Wrocławski):
 
