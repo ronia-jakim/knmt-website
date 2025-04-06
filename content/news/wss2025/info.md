@@ -24,7 +24,7 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
 
     Wyznacz uzyskaną w ten sposób stałą w nierówności maksymalnej
     $$|\\{M f \ge \lambda\\}| \le \frac{C_n}{\lambda} \int_{\mathbb{R}^n} |f(y)| dy .$$
-2. Przypuśćmy, że $M f \in L^1(\R^n)$. Co nam to mówi o funkcji $f$?
+2. Przypuśćmy, że $M f \in L^1(\mathbb{R}^n)$. Co nam to mówi o funkcji $f$?
 3. Na przestrzeni metrycznej $X$ (lokalnie zwartej, ośrodkowej) z miarą borelowską $\mu$ (dodatnią i skończoną na kulach) określamy scentrowany operator maksymalny
     $$M_\mu f(x) = \sup_{r > 0} \frac{1}{\mu(B(x, r))} \int_{B(x, r)} |f(y)| \mu(dy) .$$
     Czy $M_\mu$ spełnia nierówność maksymalną
@@ -50,7 +50,7 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
         - dla $p > 0$, $L$ : skończone lub $L = K$.
     - Niech $Aut_{\text{def}}(K) = $ zbiór definiowalnych automorfizmów ciała $K$
         - dla $p = 0$, $Aut_{\text{def}}(K) = \{id\}$.
-        - dla $p > 0$, $Aut_{\text{def}}(K) \to Gal(\hat{\mathbb{F}}_p / \mathbb{F}_p$ i grupa 
+        - dla $p > 0$, $Aut_{\text{def}}(K) \to Gal(\hat{\mathbb{F}}_p / \mathbb{F}_p)$ i grupa 
 
         $Aut_{\text{def}}(K)$ 
 
