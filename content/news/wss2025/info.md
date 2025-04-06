@@ -18,12 +18,12 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
 ✏ Zadania z analizy harmonicznej (Mateusz Kwaśnicki, Politechnika Wrocławska):
 
 1. Wykaż, że w wymiarze $n \ge 2$ operator maksymalny Hardy'ego--Littlewooda
-    $$M f(x) = \sup \left\{\frac{1}{|B|} \int_B |f(y)| dy : \text{$B$ --- kula zawierająca $x$}\right\}$$
+    $$M f(x) = \sup \{\frac{1}{|B|} \int_B |f(y)| dy : \text{$B$ --- kula zawierająca $x$}\}$$
     również można oszacować przy pomocy pewnych przesunięć operatora diadycznego
-    $$M_\Delta f(x) = \sup \left\{\frac{1}{|Q|} \int_Q |f(y)| dy : \text{$Q$ --- diadyczna kostka zawierająca $x$}\right\}$$
+    $$M_\Delta f(x) = \sup \{\frac{1}{|Q|} \int_Q |f(y)| dy : \text{$Q$ --- diadyczna kostka zawierająca $x$}\}$$
 
     Wyznacz uzyskaną w ten sposób stałą w nierówności maksymalnej
-    $$|\{M f \ge \lambda\}| \le \frac{C_n}{\lambda} \int_{\R^n} |f(y)| dy .$$
+    $$|\{M f \ge \lambda\}| \le \frac{C_n}{\lambda} \int_{\mathbb{R}^n} |f(y)| dy .$$
 
 ✏ Zadania z logiki i teorii modeli (Krzysztof Krupiński, Uniwersytet Wrocławski):
 
