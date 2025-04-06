@@ -36,15 +36,14 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
     Wywnioskuj, że dla $p \in (1, \infty)$ mamy
     $$ \mathbb{E}\bigl[(X_N^\star)^p\bigr] & \le \biggl(\frac{p}{p - 1}\biggr)^p \mathbb{E}\bigl[(X_N)^p\bigr] .$$
 5. Udowodnij, że dla $p \in (1, \infty]$ zachodzi
-    $$\|M f\|_p & \le C_{n,p} \|f\|_p .$$
+    $$\|M f\|_p \le C_{n,p} \|f\|_p .$$
 6. Jak zdefiniować operator maksymalny na kracie $\mathbb{Z}^n$? Czy spełnia on analogiczne nierówności maksymalne?
 7. Wyznacz szereg Fouriera dwustronnego ciągu $\tfrac{1}{n} \ind_{\Z \setminus \{0\}}(n)$:
     $$\sum_{n \in \Z \setminus \{0\}} \frac{e^{i n x}}{n} \, .$$
-8. Dyskretna transformata Hilberta dana jest wzorem
-    $$\dht[a_n] & = \frac{1}{\pi} \sum_{k \in \Z \setminus \{0\}} \frac{a_{n - k}}{k} \, .$$
+8. Dyskretna transformata Hilberta dana jest wzorem$$\dht[a_n] & = \frac{1}{\pi} \sum_{k \in \Z \setminus \{0\}} \frac{a_{n - k}}{k} \, .$$
     Udowodnij, że $\dht$ jest operatorem ograniczonym na $\ell^2(\Z)$.
 9. Udowodnij, że
-    $$(\dht [a_n])^2 & = 2 \dht \bigl[a_n \cdot \dht [a_n]\bigr]  + \tfrac{1}{3} \bigl(\avg [a_n^2] + 2 a_n \cdot \avg [a_n]\bigr) ,$$
+    $$(\dht [a_n])^2 = 2 \dht \bigl[a_n \cdot \dht [a_n]\bigr]  + \tfrac{1}{3} \bigl(\avg [a_n^2] + 2 a_n \cdot \avg [a_n]\bigr) ,$$
     gdzie
     $$\avg [a_n] & = \frac{3}{\pi^2} \sum_{k \in \Z \setminus \{0\}} \frac{a_{n - k}}{k^2} \, .$$
 10. Udowodnij, że $\dht$ jest operatorem ograniczonym na $\ell^p(\Z)$ gdy $p = 2^m$, $m = 1, 2, \ldots$
