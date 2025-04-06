@@ -24,6 +24,11 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
 
     Wyznacz uzyskaną w ten sposób stałą w nierówności maksymalnej
     $$|\{M f \ge \lambda\}| \le \frac{C_n}{\lambda} \int_{\mathbb{R}^n} |f(y)| dy .$$
+2. Przypuśćmy, że $M f \in L^1(\R^n)$. Co nam to mówi o funkcji $f$?
+3. Na przestrzeni metrycznej $X$ (lokalnie zwartej, ośrodkowej) z miarą borelowską $\mu$ (dodatnią i skończoną na kulach) określamy scentrowany operator maksymalny
+    $$M_\mu f(x) = \sup_{r > 0} \frac{1}{\mu(B(x, r))} \int_{B(x, r)} |f(y)| \mu(dy) .$$
+    Czy $M_\mu$ spełnia nierówność maksymalną
+    $$\mu\{M_\mu f \ge \lambda\} \le \frac{C_\mu}{\lambda} \int_X |f(y)| \mu(dy)?$$
 
 ✏ Zadania z logiki i teorii modeli (Krzysztof Krupiński, Uniwersytet Wrocławski):
 
