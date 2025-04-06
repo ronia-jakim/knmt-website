@@ -37,6 +37,8 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
     $$ \mathbb{E}\bigl[(X_N^\star)^p\bigr] & \le \biggl(\frac{p}{p - 1}\biggr)^p \mathbb{E}\bigl[(X_N)^p\bigr] .$$
 5. Udowodnij, że dla $p \in (1, \infty]$ zachodzi
     $$\|M f\|_p & \le C_{n,p} \|f\|_p .$$
+6. Jak zdefiniować operator maksymalny na kracie $\mathbb{Z}^n$? Czy spełnia on analogiczne nierówności maksymalne?
+
 
 ✏ Zadania z logiki i teorii modeli (Krzysztof Krupiński, Uniwersytet Wrocławski):
 
