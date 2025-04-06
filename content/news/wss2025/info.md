@@ -15,11 +15,17 @@ Podczas konferencji odbyły się warsztaty poświęcone analizie harmonicznej or
 
 Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konferencji – szczególne podziękowania kierujemy do Dziekana prof. Buraczewskiego za wsparcie oraz do wolontariuszy, bez których zaangażowania wydarzenie nie mogłoby się odbyć. Mamy nadzieję, że przyszłoroczna edycja spotka się z równie dużym zainteresowaniem!
 
-✏ Zadania z analizy harmonicznej (Mateusz Kwaśnicki):
+✏ Zadania z analizy harmonicznej (Mateusz Kwaśnicki, Politechnika Wrocławska):
 
-[coming soon]
+Wykaż, że w wymiarze $n \ge 2$ operator maksymalny Hardy'ego--Littlewooda
+$$M f(x) = \sup \biggl\{\frac{1}{|B|} \int_B |f(y)| dy : \text{$B$ --- kula zawierająca $x$}\biggr\}$$
+również można oszacować przy pomocy pewnych przesunięć operatora diadycznego
+$$M_\Delta f(x) = \sup \biggl\{\frac{1}{|Q|} \int_Q |f(y)| dy : \text{$Q$ --- diadyczna kostka zawierająca $x$}\biggr\}$$
 
-✏ Zadania z logiki i teorii modeli (Krzysztof Krupiński):
+Wyznacz uzyskaną w ten sposób stałą w nierówności maksymalnej
+$$|\{M f \ge \lambda\}| & \le \frac{C_n}{\lambda} \int_{\R^n} |f(y)| dy .$$
+
+✏ Zadania z logiki i teorii modeli (Krzysztof Krupiński, Uniwersytet Wrocławski):
 
 1. $G$ : grupa minimalna $\implies G/Z(G)$ : grupa minimalna z trywialnym centrem.
 2. $G$ : grupa minimalna, abelowa $\implies (1) \;\vee\;(2)$, gdzie:
@@ -33,9 +39,7 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
         - dla $p > 0$, $L$ : skończone lub $L = K$.
     - Niech $Aut_{\text{def}}(K) = $ zbiór definiowalnych automorfizmów ciała $K$
         - dla $p = 0$, $Aut_{\text{def}}(K) = \{id\}$.
-        - dla $p > 0$, 
-
-        $Aut_{\text{def}}(K) \to Gal(\hat{\mathbb{F}}_p / \mathbb{F}_p)$ 
+        - dla $p > 0$, $Aut_{\text{def}}(K) \to Gal(\hat{\mathbb{F}}_p / \mathbb{F}_p)$ 
 
         i grupa 
 
