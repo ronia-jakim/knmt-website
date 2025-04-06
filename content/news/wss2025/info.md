@@ -32,7 +32,7 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
 4. Jeśli $X_n$ jest nieujemnym martyngałem oraz
     $$X_N^\star = \max\{X_0, X_1, \ldots, X_N\}, $$
     to dla $\lambda > 0$ wykazaliśmy mocniejszą wersję nierówności Dooba:
-    $$\mathbb{P}\bigl[X_N^\star \ge \lambda\bigr] \le \frac{1}{\lambda} \, \mathbb{E}\bigl[X_N \mathbb{1}_{\{X_N^\star \ge \lambda\}}\bigr] .$
+    $$\mathbb{P}\bigl[X_N^\star \ge \lambda\bigr] \le \frac{1}{\lambda} \, \mathbb{E}\bigl[X_N \mathbb{1}_{\{X_N^\star \ge \lambda\}}\bigr] .$$
     Wywnioskuj, że dla $p \in (1, \infty)$ mamy
     $$ \mathbb{E}\bigl[(X_N^\star)^p\bigr] & \le \biggl(\frac{p}{p - 1}\biggr)^p \mathbb{E}\bigl[(X_N)^p\bigr] .$$
 
@@ -50,9 +50,7 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
         - dla $p > 0$, $L$ : skończone lub $L = K$.
     - Niech $Aut_{\text{def}}(K) = $ zbiór definiowalnych automorfizmów ciała $K$
         - dla $p = 0$, $Aut_{\text{def}}(K) = \{id\}$.
-        - dla $p > 0$, $Aut_{\text{def}}(K) \to Gal(\hat{\mathbb{F}}_p / \mathbb{F}_p)$ i grupa 
-
-        $Aut_{\text{def}}(K)$ 
+        - dla $p > 0$, $Aut_{\text{def}}(K) \to Gal(\hat{\mathbb{F}}_p / \mathbb{F}_p)$ i grupa $Aut_{\text{def}}(K)$ 
 
         jest nieskończona.
 
