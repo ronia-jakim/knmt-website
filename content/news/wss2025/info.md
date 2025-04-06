@@ -17,7 +17,7 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
 
 ✏ Zadania z analizy harmonicznej (Mateusz Kwaśnicki, Politechnika Wrocławska):
 
-Wykaż, że w wymiarze $n \ge 2$ operator maksymalny Hardy'ego--Littlewooda
+1. Wykaż, że w wymiarze $n \ge 2$ operator maksymalny Hardy'ego--Littlewooda
 $$M f(x) = \sup \left\{\frac{1}{|B|} \int_B |f(y)| dy : \text{$B$ --- kula zawierająca $x$}\right\}$$
 również można oszacować przy pomocy pewnych przesunięć operatora diadycznego
 $$M_\Delta f(x) = \sup \left\{\frac{1}{|Q|} \int_Q |f(y)| dy : \text{$Q$ --- diadyczna kostka zawierająca $x$}\right\}$$
