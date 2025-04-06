@@ -38,7 +38,8 @@ Serdecznie dziękujemy wszystkim, którzy przyczynili się do organizacji konfer
 5. Udowodnij, że dla $p \in (1, \infty]$ zachodzi
     $$\|M f\|_p & \le C_{n,p} \|f\|_p .$$
 6. Jak zdefiniować operator maksymalny na kracie $\mathbb{Z}^n$? Czy spełnia on analogiczne nierówności maksymalne?
-
+7. Wyznacz szereg Fouriera dwustronnego ciągu $\tfrac{1}{n} \ind_{\Z \setminus \{0\}}(n)$:
+$$\sum_{n \in \Z \setminus \{0\}} \frac{e^{i n x}}{n} \, .$$
 
 ✏ Zadania z logiki i teorii modeli (Krzysztof Krupiński, Uniwersytet Wrocławski):
 
