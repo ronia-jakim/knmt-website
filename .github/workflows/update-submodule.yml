@@ -10,9 +10,10 @@ jobs:
 
     steps:
     - name: Checkout knmt website and submodules
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
       with:
         submodules: 'recursive'  # Make sure submodules are fetched
+        token: ${{ secrets.WORKFLOW_OVERWRITE_TOKEN }}
     
     - name: Set Git user name and email
       run: |
