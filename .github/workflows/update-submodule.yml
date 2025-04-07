@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout knmt website and submodules
+    - name: Checkout knmt website and submodules
       uses: actions/checkout@v4
       with:
         submodules: 'recursive'  # Make sure submodules are fetched
