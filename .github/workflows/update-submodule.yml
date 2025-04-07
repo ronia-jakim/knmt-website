@@ -14,11 +14,24 @@ jobs:
       with:
         submodules: 'recursive'  # Make sure submodules are fetched
 
-    - name: Pull latest changes
+    - name: Checkout correct branch for Repo knmt-website
       run: |
-        cd content  # Navigate to submodule directory
-        git pull origin main # Pull latest changes and allow unrelated histories
-        cd ..  # Go back to the parent repo 
+        git checkout main  # Or your specific branch
+        git pull origin main  # Make sure Repo knmt-website is up to date
+
+    - name: Checkout correct branch for the submodule 
+      run: |
+        cd content  # Go into submodule directory
+        git checkout main  # Or your specific branch
+        git pull origin main  # Pull latest changes from the submodule
+
+    - name: Stage submodule changes
+      run: |
+        cd ..
+        git add content  # Stage the submodule changes (updated reference)
+
+    - name: Commit and push submodule update
+      run: |
 
     - name: Commit and push the updated submodule
       run: |
