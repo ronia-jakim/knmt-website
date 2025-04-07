@@ -22,5 +22,5 @@ jobs:
       run: |
         git add content  # Stage the updated submodule changes
         git commit -m "Update submodule to latest" || echo "No changes to commit"
-        git push
+        git push https://$GITHUB_ACTOR:${{ secrets.A_PUSH_TOKEN }}@github.com/ronia-jakim/knmt-website.git
 
