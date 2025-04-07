@@ -1,31 +1,26 @@
 name: Update Submodule content
 
 on:
-  schedule:
-    - cron: '0 * * * *'  # every hour (UTC)
-  workflow_dispatch:     # allows manual trigger
+  repository_dispatch:
+    types: [update-submodule]
 
 jobs:
   update-submodule:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout website with submodules
+      - name: Checkout knmt-website: and submodules
       uses: actions/checkout@v4
       with:
-        submodules: 'recursive'
-        token: ${{ secrets.GITHUB_TOKEN }}
+        submodules: 'recursive'  # Make sure submodules are fetched
 
-    - name: Configure Git
+    - name: Pull latest changes in content
       run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git submodule update --remote --merge  # Updates the submodule to the latest commit on B
 
-    - name: Pull latest from submodule content
+    - name: Commit and push the updated submodule
       run: |
-        git submodule update --remote --merge
-        git add content
-        git commit -m "chore: update submodule content to latest" || echo "No changes to commit"
+        git add content  # Stage the updated submodule changes
+        git commit -m "github action :: Update submodule content to latest" || echo "No changes to commit"
+        git push
 
-    - name: Push changes
-      run: git push
