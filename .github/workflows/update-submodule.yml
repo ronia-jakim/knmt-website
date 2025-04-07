@@ -42,6 +42,5 @@ jobs:
       env:
         TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the PAT stored in GitHub Secrets
       run: |
-        # git remote set-url origin https://$GITHUB_ACTOR:${{ secrets.A_PUSH_TOKEN }}@github.com/ronia-jakim/knmt-website.git
         git push origin HEAD:main  # Push changes to the main branch (or your specific branch)
 
