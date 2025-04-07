@@ -1,4 +1,4 @@
-name: Update Submodule 
+name: Update Submodule content
 
 on:
   repository_dispatch:
