@@ -36,10 +36,12 @@ jobs:
 
     - name: Commit and push submodule update
       run: |
-
-    - name: Commit and push the updated submodule
-      run: |
-        git add content  # Stage the updated submodule changes
         git commit -m "github action :: Update submodule content to latest" || echo "No changes to commit"
-        git push https://$GITHUB_ACTOR:${{ secrets.A_PUSH_TOKEN }}@github.com/ronia-jakim/knmt-website.git
+
+    - name: Push changes to Repo A
+      env:
+        TOKEN: ${{ secrets.A_PUSH_TOKEN }}  # Use the PAT stored in GitHub Secrets
+      run: |
+        git remote set-url origin https://$GITHUB_ACTOR:${{ secrets.A_PUSH_TOKEN }}@github.com/ronia-jakim/knmt-website.git
+        git push origin HEAD:main  # Push changes to the main branch (or your specific branch)
 
