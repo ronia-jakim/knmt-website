@@ -1,4 +1,4 @@
-name: Update Submodule content
+name: Update Submodule 
 
 on:
   repository_dispatch:
@@ -8,19 +8,19 @@ jobs:
   update-submodule:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout knmt website and submodules
+    steps:
+    - name: Checkout A and submodules
       uses: actions/checkout@v4
       with:
         submodules: 'recursive'  # Make sure submodules are fetched
 
-    - name: Pull latest changes in content
+    - name: Pull latest changes
       run: |
-        git submodule update --remote --merge  # Updates the submodule to the latest commit on B
+        git submodule update --remote --merge  # Updates the submodule to the latest commit on content
 
     - name: Commit and push the updated submodule
       run: |
         git add content  # Stage the updated submodule changes
-        git commit -m "github action :: Update submodule content to latest" || echo "No changes to commit"
+        git commit -m "Update submodule to latest" || echo "No changes to commit"
         git push
 
