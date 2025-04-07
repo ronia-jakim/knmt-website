@@ -27,7 +27,6 @@ jobs:
 
     - name: Stage submodule changes
       run: |
-        cd ..
         git add content  # Stage the submodule changes (updated reference)
 
     - name: Commit and push submodule update
