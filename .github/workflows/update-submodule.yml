@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         submodules: 'recursive'  # Make sure submodules are fetched
-        token: ${{ secrets.WORKFLOW_OVERWRITE_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}  # Use the PAT stored in GitHub Secrets
     
     - name: Set Git user name and email
       run: |
