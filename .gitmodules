@@ -1,4 +1,0 @@
-[submodule "content"]
-	path = content
-  url = https://github.com/ronia-jakim/knmt-website-content.git
-	branch = main
