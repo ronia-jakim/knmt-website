@@ -16,7 +16,7 @@ jobs:
 
     - name: Pull latest changes
       run: |
-        git submodule update --remote --merge  # Updates the submodule to the latest commit on content
+        git submodule update --remote --merge  --allow-unrelated-histories # Updates the submodule to the latest commit on content
 
     - name: Commit and push the updated submodule
       run: |
