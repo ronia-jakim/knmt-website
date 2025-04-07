@@ -8,7 +8,7 @@ jobs:
   update-submodule:
     runs-on: ubuntu-latest
 
-    steps:
+  steps:
     - name: Checkout knmt website and submodules
       uses: actions/checkout@v4
       with:
