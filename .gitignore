@@ -3,3 +3,4 @@ knmt-website/
 __pycache__/
 venv/
 .venv/
+.sass*
