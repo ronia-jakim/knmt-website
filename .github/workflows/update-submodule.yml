@@ -16,7 +16,9 @@ jobs:
 
     - name: Pull latest changes
       run: |
-        git submodule update --remote --merge  --allow-unrelated-histories # Updates the submodule to the latest commit on content
+        cd content  # Navigate to submodule directory
+        git pull origin main --allow-unrelated-histories  # Pull latest changes and allow unrelated histories
+        cd ..  # Go back to the parent repo 
 
     - name: Commit and push the updated submodule
       run: |
