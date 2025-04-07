@@ -17,7 +17,7 @@ jobs:
     - name: Pull latest changes
       run: |
         cd content  # Navigate to submodule directory
-        git pull origin main --allow-unrelated-histories  # Pull latest changes and allow unrelated histories
+        git pull origin main # Pull latest changes and allow unrelated histories
         cd ..  # Go back to the parent repo 
 
     - name: Commit and push the updated submodule
