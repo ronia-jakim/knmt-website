@@ -42,5 +42,5 @@ jobs:
       env:
         TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the PAT stored in GitHub Secrets
       run: |
-        git push origin HEAD:main  # Push changes to the main branch (or your specific branch)
+        git push 
 
