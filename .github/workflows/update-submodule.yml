@@ -38,7 +38,7 @@ jobs:
       run: |
         git commit -m "github action :: Update submodule content to latest" || echo "No changes to commit"
 
-    - name: Push changes to Repo A
+    - name: Push changes to Repo knmt website
       env:
         TOKEN: ${{ secrets.A_PUSH_TOKEN }}  # Use the PAT stored in GitHub Secrets
       run: |
