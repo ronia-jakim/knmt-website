@@ -27,3 +27,9 @@ sass ./src/stylesheets/calendar.scss ./build/stylesheets/calendar.css
 # fi
 
 # python -m flask --app ./src/pytong/build_main.py run --debug
+
+curl -L 'https://docs.google.com/spreadsheets/d/1Vhrf9JDFxlYLtppxT66KXwg8l-e1yfeeT-GF-ymW_Aw/export?exportFormat=csv' > ./src/pytong/babysteps.csv
+
+./src/pytong/babysteps_registered.py
+
+rm ./src/pytong/babysteps.csv

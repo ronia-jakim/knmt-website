@@ -1,0 +1,45 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <style>
+
+    .bitter-<uniquifier> {
+      font-family: "Bitter", serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+    }
+
+    th {
+      font-family: "Bitter";
+      font-weight: 700;
+      font-size: 18pt;
+    }
+    td {
+      font-family: "Bitter";
+      padding: 7px 5px;
+      font-size: 14pt;
+    }
+
+  </style>
+</head>
+
+<html>
+
+  <table style="width:100%;">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Affiliation</th>
+    </tr>
+    {% for p in participants %}
+    <tr>
+      <td>{{ p.name }}</td>
+      <td>{{ p.surname }}</td>
+      <td>{{ p.affiliation }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</html>
