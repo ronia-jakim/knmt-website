@@ -15,6 +15,7 @@ with open('./src/pytong/babysteps.csv') as csvfile:
             "surname": surname, 
             "affiliation": affiliation
             })
+        print(affiliation)
 
 
 from jinja2 import Environment, FileSystemLoader
