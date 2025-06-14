@@ -3,6 +3,9 @@ import frontmatter
 from jinja2 import Environment, FileSystemLoader
 import math
 
+from datetime import datetime
+last_update = datetime.today().strftime('%Y-%m-%d')
+
 def build_index_pages(environment, news_metadata):
     template = environment.get_template("index.html")
 
@@ -48,7 +51,7 @@ def build_index_pages(environment, news_metadata):
 
     i = 1 
     for d in sliced_data:
-        html_cnt = template.render(posts = d["post_data"], pages=d["relevant_pages"], prev=d["prev"], nxt=d["nxt"])
+        html_cnt = template.render(posts = d["post_data"], pages=d["relevant_pages"], prev=d["prev"], nxt=d["nxt"], last_update=last_update)
         target_file = "build/index.html"
         if i != 1: 
             target_file = f"build/index{i}.html"
