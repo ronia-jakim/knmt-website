@@ -30,11 +30,35 @@
 
   <table style="width:100%;">
     <tr>
+      <th colspan="3">
+        Onsite participants
+      </th>
+    </tr>
+    <tr>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Affiliation</th>
     </tr>
-    {% for p in participants %}
+    {% for p in offline %}
+    <tr>
+      <td>{{ p.name }}</td>
+      <td>{{ p.surname }}</td>
+      <td>{{ p.affiliation }}</td>
+    </tr>
+    {% endfor %}
+
+    <tr><td><br/></td></tr>
+    <tr>
+      <th colspan="3">
+        Online participants
+      </th>
+    </tr>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Affiliation</th>
+    </tr>
+    {% for p in online %}
     <tr>
       <td>{{ p.name }}</td>
       <td>{{ p.surname }}</td>
