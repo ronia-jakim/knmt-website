@@ -10,8 +10,10 @@ from jinja2 import Environment, FileSystemLoader
 def main():
     subpages = []
     try:
-    except:
+
+    except Exception as inst:
         print('could not find subpages of base')
+        print(inst)
 
 
 if __name__ == '__main__':
