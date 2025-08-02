@@ -1,0 +1,54 @@
+{% extends "../../base.html" %}
+
+{% block moreCSS %}
+<style>
+table {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+
+td, th {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px dotted black;
+
+  padding-top: 10px;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  padding-left: 10px;
+}
+
+a {
+  font-size: 16px !important;
+}
+</style>
+{% endblock %}
+
+{% block mainText %}
+<table>
+  <colgroup>
+    <col span="1" style="width: 200px;">
+    <col span="1" style="width: 500px;">
+  </colgroup>
+  <tr>
+    <th>autor</th>
+    <th>tytuł</th>
+  </tr>
+  {% for b in book_lst %}
+  <tr>
+    <td>{{ b.author }}</td>
+    <td><i>{{ b.title }}</i></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
