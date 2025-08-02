@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
-python ./src/main.py
+rm -rf base/build
+
+mkdir base/build
+cp -r content/ base/build/content/
+
+python base/src/main.py
 
 

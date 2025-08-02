@@ -7,7 +7,7 @@ import os
 import datetime
 
 CONTENT_DIRECTORY = 'content/news/'
-TARGET_PATH = 'build/content/news/'
+TARGET_PATH = 'base/build/content/news/'
 
 DEFAULT_IMAGE = '/assets/img/referat_preview.jpg'
 
@@ -52,7 +52,6 @@ def build_post_pages (env, subpages):
         except Exception as inst:
             print("failed to write on html file for post: " + p)
             print(inst)
-
     
         news_metadata.append(p_info)
 
