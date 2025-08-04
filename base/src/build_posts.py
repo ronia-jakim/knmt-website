@@ -1,13 +1,11 @@
 import frontmatter 
 import markdown
 
-from jinja2 import Environment, FileSystemLoader
-
 import os
 import datetime
 
 CONTENT_DIRECTORY = 'content/news/'
-TARGET_PATH = 'base/build/content/news/'
+TARGET_PATH = 'build/content/news/'
 
 DEFAULT_IMAGE = '/assets/img/referat_preview.jpg'
 

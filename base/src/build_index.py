@@ -1,8 +1,12 @@
 import math
 
+from basic_functions import getEnvironment, getSubpages
 from build_posts import build_post_pages
 
-def build_index(env, subpages):
+def build_index():
+    subpages = getSubpages()
+
+    env = getEnvironment()
     news_metadata = build_post_pages(env, subpages)
     template = env.get_template("index.html")
 
@@ -25,10 +29,10 @@ def split_index_data(news_metadata, posts_length, all_pages):
 
         pp = ""
         if i != 1:
-            pp = f"base/build/index{i-1}.html"
+            pp = f"build/index{i-1}.html"
         nn = ""
         if posts_length > 5 and (i+1) * 5 < posts_length: 
-            nn = f"base/build/index{i+1}.html"
+            nn = f"build/index{i+1}.html"
             
 
         sliced_data.append({
@@ -66,9 +70,9 @@ def create_index_pages(sliced_data: list, template, subpages):
                                        prev=d["prev"], 
                                        nxt=d["nxt"], 
                                        subpages = subpages )
-            target_file = "base/build/index.html"
+            target_file = "build/index.html"
             if i != 1: 
-                target_file = f"base/build/index{i}.html"
+                target_file = f"build/index{i}.html"
 
             with open (target_file, mode="w", encoding="utf-8") as m:
                 m.write(html_cnt)

@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
-rm -rf base/build
+rm -rf build
 
-mkdir base/build
-cp -r content/ base/build/content/
+mkdir build
+cp -r content/ build/content/
 
-python base/src/main.py
+PYTHONPATH=. python base/src/main.py
 
 
+for dir in base/subpages/*/; do
+    [ -d "$dir" ] && [ -x "$dir/build.sh" ] && "$dir/build.sh"
+done
