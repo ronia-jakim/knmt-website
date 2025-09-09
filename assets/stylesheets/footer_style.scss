@@ -1,4 +1,4 @@
-@import 'colors_fonts';
+@use 'colors_fonts';
 
 footer{
     width:100%;
@@ -8,7 +8,7 @@ footer{
     left: 0;
     bottom: 0; 
 
-    background-color: $blue;
+    background-color: colors_fonts.$blue;
 
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ footer{
 }
 
 footer h3 {
-  color: $fg;
+  color: colors_fonts.$fg;
   font-weight: 800;
 
   margin: 0px;
@@ -58,7 +58,7 @@ footer h3 {
   padding-top: 5px;
   padding-bottom: 2px;
 
-  background-color: $subtitle;
+  background-color: colors_fonts.$subtitle;
   display: flex;
   flex-direction: row;
 
@@ -78,12 +78,12 @@ footer h3 {
 
 .www_auth a {
   font-size: 12px;
-  color: $blue;
+  color: colors_fonts.$blue;
   font-weight: 500;
 }
 
 .auth_name {
-  color: $bg !important;
+  color: colors_fonts.$bg !important;
   font-weight: 800;
 }
 
@@ -92,18 +92,18 @@ footer h3 {
   background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
   background-size: 20px;
 
-  background-color: $bg;
+  background-color: colors_fonts.$bg;
 
   width: 300px;
   height: 25px;
 
   border: none;
-  border: 1px solid $subtitle;
+  border: 1px solid colors_fonts.$subtitle;
 }
 
 .foot_contact {
   font-family: Nunito;
   font-size: 13px;
-  color: $fg;
+  color: colors_fonts.$fg;
 }
 

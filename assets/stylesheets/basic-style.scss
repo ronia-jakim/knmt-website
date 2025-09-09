@@ -1,4 +1,5 @@
-@import 'colors_fonts';
+@use "sass:meta";
+@use 'colors_fonts';
 
 html {
   margin: 0px;
@@ -9,7 +10,7 @@ html {
   font-family: Nunito;
 
 
-  background-color: $subtitle;
+  background-color: colors_fonts.$subtitle;
   //
   // background-image: linear-gradient(green, white);
   // background-size: 100% 50%;
@@ -21,14 +22,14 @@ body {
   margin: 0px;
   min-height: 100vh;
   
-  background-color: $bg;
+  background-color: colors_fonts.$bg;
 }
 
 h1 {
   font-size: 24px;
   font-weight: 800;
 
-  color: $fg;
+  color: colors_fonts.$fg;
   
   padding: 0px;
   margin: 0px;
@@ -36,7 +37,7 @@ h1 {
 }
 
 h2 {
-  color: $subtitle;
+  color: colors_fonts.$subtitle;
 
   font-size: 20px;
   margin: 0;
@@ -48,7 +49,7 @@ h3 {
   font-size: 16px;
   font-weight: 500;
 
-  color: $subtitle;
+  color: colors_fonts.$subtitle;
 
   padding: 0px;
   margin: 0px;
@@ -61,7 +62,7 @@ h4 {
   margin: 0;
   padding: 0;
 
-  color: $blue;
+  color: colors_fonts.$blue;
 
   font-size: 15px;
 }
@@ -69,7 +70,7 @@ h4 {
 a {
   text-decoration: none;
   font-weight: 800;
-  color: $subtitle;
+  color: colors_fonts.$subtitle;
 
   cursor: pointer;
 }
@@ -80,22 +81,22 @@ a {
 
   padding: 20px 40px;
 
-  background-color: $subtitle;
-  color: $bg;
+  background-color: colors_fonts.$subtitle;
+  color: colors_fonts.$bg;
 
   font-weight: 700;
   font-size: 20px;
 }
 
 .wss_button:hover {
-  background-color: $blue;
-  color: $fg;
+  background-color: colors_fonts.$blue;
+  color: colors_fonts.$fg;
 }
 
 
-@import 'header_style';
-@import 'button_menu';
-@import 'footer_style';
+@include meta.load-css('header_style');
+@include meta.load-css('button_menu');
+@include meta.load-css('footer_style');
 
 .main_container {
   width: 80%;
@@ -104,7 +105,7 @@ a {
   padding-bottom: 200px;
 
   font-size: 16px;
-  color: $fg;
+  color: colors_fonts.$fg;
 }
 
 .flexrow_100 {

@@ -4,7 +4,7 @@
     <title>Wrocławskie Spotkania Szkockie</title>
     <link rel="icon" href="/assets/img/logo/logo.png" type="image/icon type">
 
-    <link rel="stylesheet" href="/stylesheets/basic-style.css">
+    <link rel="stylesheet" href="/assets/stylesheets/basic-style.css">
 
     <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
 
@@ -51,7 +51,11 @@
     </div>
     <div class="button_menu">
       {% for sp in subpages %}
-        <button onclick="location.href='{{ sp.url }}'">{{ sp.name }}</button>
+        {% if sp.special %}
+          <button onclick="location.href='{{ sp.url }}'" style="background-color: #86a5b3;">{{ sp.name }}</button>
+        {% else %}
+          <button onclick="location.href='{{ sp.url }}'">{{ sp.name }}</button>
+        {% endif %}
       {% endfor %}
     </div>
 
