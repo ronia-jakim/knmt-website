@@ -8,7 +8,7 @@ mkdir build
 mkdir -p build/assets/stylesheets/
 
 # sass assets/stylesheets/basic-style.scss build/assets/stylesheets/basic-style.css
-sass --no-source-map assets/stylesheets:build/assets/stylesheets
+sass assets/stylesheets:build/assets/stylesheets
 
 cp -r assets/img build/assets
 cp -r assets/fonts build/assets
