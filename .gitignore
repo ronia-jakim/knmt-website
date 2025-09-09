@@ -5,3 +5,4 @@ knmt-website/
 venv/
 .venv/
 .sass*
+.sass*/
