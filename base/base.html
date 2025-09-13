@@ -22,11 +22,46 @@
     {% block moreCSS %}
     {% endblock %}
 
+    <script>
+      function toggleDarkTheme() {
+        let docBody = document.body
+
+        let themeIcon = document.getElementById("dark-theme")
+        const lightIcon = '/assets/img/light.svg'
+        const darkIcon = '/assets/img/moon.svg'
+
+        const dataTheme = docBody.getAttribute("data-theme")
+
+        if (dataTheme === "dark") {
+          themeIcon.setAttribute("src", lightIcon)
+          
+          docBody.setAttribute("data-theme", "light")
+        }
+        else {
+          themeIcon.setAttribute("src", darkIcon)
+          
+          docBody.setAttribute("data-theme", "dark")
+        }
+      }
+
+      const params = new URLSearchParams(window.location.search);
+      let theme = params.get("theme") || "light";
+      console.log(theme)
+
+      function navigateTo(url) {
+        theme = document.body.getAttribute("data-theme") || "light"
+        const destination = `${url}?theme=${theme}`
+        console.log(theme, url, destination)
+
+        window.open(destination, "_self")
+      }
+    </script>
+
     <meta name="keywords" content="koło, naukowe, kolo, matematyka, matematyków, matematykow, worclaw, wrocław, teoretycznych, teoretyczna">
     <meta name="description" content="Strona internetowa Koła Naukowego Matematyków Teoretyków na Uniwersytecie Wrocławskim">
     <meta charset="UTF-8">
   </head>
-  <body>
+  <body data-theme="light">
     <div class="main_header">
         <div class="search_contact">
           <a href="/info">Dane Kontaktowe</a>
@@ -35,6 +70,7 @@
 
           <img src="/assets/img/facebook.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')" />
           <img src="/assets/img/calendar.svg" onclick="location.href='/calendar'" />
+          <img src="/assets/img/light.svg" id="dark-theme" onclick="toggleDarkTheme()" >
         </div>
 
       <div class="left_header">
@@ -52,9 +88,9 @@
     <div class="button_menu">
       {% for sp in subpages %}
         {% if sp.special %}
-          <button onclick="location.href='{{ sp.url }}'" style="background-color: #86a5b3;">{{ sp.name }}</button>
+          <button onclick="navigateTo('{{ sp.url }}')" style="background-color: #4E7F94;">{{ sp.name }}</button>
         {% else %}
-          <button onclick="location.href='{{ sp.url }}'">{{ sp.name }}</button>
+          <button onclick="navigateTo('{{ sp.url }}')">{{ sp.name }}</button>
         {% endif %}
       {% endfor %}
     </div>

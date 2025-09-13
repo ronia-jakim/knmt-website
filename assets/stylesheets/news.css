@@ -1,4 +1,4 @@
-@use 'colors_fonts';
+@import 'colors_fonts.css';
 
 .post_box {
   gap: 20px;
@@ -33,7 +33,7 @@
 
     width: 300px;
 
-    boder-left: 10px solid;
+    border-left: 10px solid;
     padding-left: 5%;
   }
   .post_board {
