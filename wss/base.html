@@ -22,6 +22,54 @@
     {% block moreCSS %}
     {% endblock %}
 
+    <script>
+      function toggleDarkTheme() {
+        let docBody = document.body
+
+        let themeIcon = document.getElementById("dark-theme")
+        const darkIcon = '/assets/img/light.svg'
+        const lightIcon = '/assets/img/moon.svg'
+
+        const dataTheme = docBody.getAttribute("data-theme")
+
+        if (dataTheme === "dark") {
+          themeIcon.setAttribute("src", lightIcon)
+          
+          docBody.setAttribute("data-theme", "light")
+        }
+        else {
+          themeIcon.setAttribute("src", darkIcon)
+          
+          docBody.setAttribute("data-theme", "dark")
+        }
+      }
+
+      const params = new URLSearchParams(window.location.search);
+      let theme = params.get("theme") || "light";
+
+      window.onload = function () {
+        document.body.setAttribute("data-theme", theme)
+
+        let themeIcon = document.getElementById("dark-theme")
+        const darkIcon = '/assets/img/light.svg'
+        const lightIcon = '/assets/img/moon.svg'
+
+        if (theme === "dark") {
+          themeIcon.setAttribute("src", darkIcon)
+        }
+        else {
+          themeIcon.setAttribute("src", lightIcon)
+        }
+      }
+
+      function navigateTo(url) {
+        theme = document.body.getAttribute("data-theme") || "light"
+        const destination = `${url}?theme=${theme}`
+
+        window.open(destination, "_self")
+      }
+    </script>
+
     <meta name="keywords" content="koło, naukowe, kolo, matematyka, matematyków, matematykow, worclaw, wrocław, teoretycznych, teoretyczna">
     <meta name="description" content="Wrocławskie Spotkania Szkocie to konferencja matematyczna dedykowana dla studentów matematyki i kierunków pokrewnych">
     <meta charset="UTF-8">
@@ -35,6 +83,7 @@
 
           <img src="/assets/img/facebook.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')" />
           <img src="/assets/img/calendar.svg" onclick="location.href='/calendar'" />
+          <img src="/assets/img/moon.svg" id="dark-theme" onclick="toggleDarkTheme()" >
         </div>
 
       <div class="left_header">
@@ -52,9 +101,9 @@
     <div class="button_menu">
       {% for sp in subpages %}
         {% if sp.special %}
-          <button onclick="location.href='{{ sp.url }}'" style="background-color: #86a5b3;">{{ sp.name }}</button>
+          <button onclick="navigateTo('{{ sp.url }}')" style="background-color: #4E7F94;">{{ sp.name }}</button>
         {% else %}
-          <button onclick="location.href='{{ sp.url }}'">{{ sp.name }}</button>
+          <button onclick="navigateTo('{{ sp.url }}')">{{ sp.name }}</button>
         {% endif %}
       {% endfor %}
     </div>

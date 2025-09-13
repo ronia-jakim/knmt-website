@@ -28,6 +28,8 @@
   flex-direction: row;
 
   align-items: center;
+
+  z-index: 0;
 }
 
 .left_header img {
@@ -53,4 +55,5 @@
 
 .search_contact img {
   height: 32px;
+  z-index: 1;
 }
