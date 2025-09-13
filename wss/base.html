@@ -23,12 +23,13 @@
     {% endblock %}
 
     <script>
+      const darkIcon = '/assets/img/light.svg'
+      const lightIcon = '/assets/img/moon.svg'
+
       function toggleDarkTheme() {
         let docBody = document.body
 
         let themeIcon = document.getElementById("dark-theme")
-        const darkIcon = '/assets/img/light.svg'
-        const lightIcon = '/assets/img/moon.svg'
 
         const dataTheme = docBody.getAttribute("data-theme")
 
@@ -44,15 +45,18 @@
         }
       }
 
-      const params = new URLSearchParams(window.location.search);
-      let theme = params.get("theme") || "light";
+      const params = new URLSearchParams(window.location.search)
+
+      let preferedTheme = "light"
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        preferedTheme = "dark"
+      }
+      let theme = params.get("theme") || preferedTheme
 
       window.onload = function () {
         document.body.setAttribute("data-theme", theme)
 
         let themeIcon = document.getElementById("dark-theme")
-        const darkIcon = '/assets/img/light.svg'
-        const lightIcon = '/assets/img/moon.svg'
 
         if (theme === "dark") {
           themeIcon.setAttribute("src", darkIcon)
