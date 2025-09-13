@@ -6,6 +6,7 @@ Website for academic club of mathematicians at University of Wrocław
 **dependencies:** 
 
 - python packages: jinja2, python-frontmatter, markdown
+- caddy for local testing
 
 ## zarządzanie informacjami ze strony
 
