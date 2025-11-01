@@ -3,7 +3,7 @@ import frontmatter
 import os
 import traceback
 
-from base.src.basic_functions import getEnvironment, getSubpages
+from wss.src.basic_functions import getEnvironment, getSubpages
 
 INFORMATION_FILE_PATH = 'content/wss/registration.md'
 
