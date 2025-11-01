@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block moreCSS %}
+<style>
+table {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+
+td, th {
+  padding: 0;
+  margin: 0;
+}
+
+th {
+  text-align: left;
+  padding-right: 10px !important;
+}
+
+a {
+  font-size: 16px !important;
+}
+</style>
+{% endblock %}
+
+{% block mainText %}
+Opłata konferencyjna wynosi 30zł, a jeden obiad - 20 zł. Informacje jak dokonać opłąty znajdują się na <a href="/wss">stronie głównej konferencji</a>.
+
+<div class="flexcolumn" styule="width: 100%;">
+    <button class="wss_button" onclick="window.open({{ uczestnicy }}, '_blank')">
+        Rejestracja uczestników (do 27.03.2025)
+    </button>
+    <div style="height: 20px;"> </div>
+    <button class="wss_button" onclick="window.open({{ referaty }}, '_blank')">
+        Rejestracja uczestników (do 27.03.2025)
+    </button>
+</div>
+
+{% endblock %}
