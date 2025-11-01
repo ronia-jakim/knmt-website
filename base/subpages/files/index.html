@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block moreCSS %}
+<style>
+pre { 
+  width: 60%; 
+  height: 750px; 
+  overflow: auto; 
+  margin: 0;
+  white-space: pre; 
+  font-family: monospace; 
+  padding: 10px; 
+}
+
+h2 {
+  padding: 20px;
+  font-size: 30px;
+}
+</style>
+{% endblock %}
+
+{% block mainText %}
+
+<div class="flexcolumn">
+  <h2>Wzór do abstraktów</h2>
+  <div class="flexrow_100" style="gap: 60px;">
+    <pre>
+      {{ abstract }}
+    </pre>
+    <embed src="/content/files/abstract-template.pdf" type="application/pdf" style="width: 40%; height: 750px;">
+  </div>
+</div>
+
+
+{% endblock %}

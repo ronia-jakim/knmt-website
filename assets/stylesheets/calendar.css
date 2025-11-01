@@ -9,27 +9,3 @@
   min-width: 700px;
 }
 
-.side_bar {
-  min-width: 401px;
-  margin-left: auto;
-  margin-right: auto;
-
-  margin-top: 30px;
-}
-
-@media all and (min-width: 1200px) {
-  .side_bar {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-
-    width: 30%;
-    margin-left: 10%;
-    min-width: 401px;
-
-    padding-left: 5%;
-
-    margin-top: 0px;
-  }
-}
