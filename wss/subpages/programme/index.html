@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block moreCSS %}
+<style>
+table {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+
+td, th {
+  padding: 0;
+  margin: 0;
+}
+
+th {
+  text-align: left;
+  padding-right: 10px !important;
+}
+
+a {
+  font-size: 16px !important;
+}
+</style>
+{% endblock %}
+
+{% block mainText %}
+W nawiasach kwadratowych podana jest sala, w jakiej wydarzenie odbędzie się.<br />
+
+Na obiady zapraszamy do {{ obiady }}<br />
+
+Szatnia na odzież wierzchnią znajduje się w {{ szatnia }}<br />
+
+<style>
+td {
+  vertical-align: top;
+  font-size:17;
+  height: 35px;
+}
+</style>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<table style="margin-left: auto; margin-right:auto; align: center; width: 80%; border: none; table-layout: fixed;">
+  <colgroup>
+    <col style="width: 100px;" />
+    <col style="width: calc(100% - 100px);" />
+  </colgroup>
+  {% for d in days %}
+    <tr style="height: 45px;"><td style="text-align:center; vertical-align: bottom; font-size: 19;" colspan="2"><b>{{ d.name }}</b></td></tr>
+    
+    {% for h in d.hours %}
+      <tr>
+        <td>
+          {{ h.time }}
+        </td>
+        <td>
+          {% if 'talks' in h %}
+            {% for t in h.talks %}
+              [{{ t.room }}] <a href="{{ t.link }}">{{ t.title }}</a> - {{ t.author }}<br />
+            {% endfor %}
+          {% else %}
+            {% if 'room' in h %}
+              [{{ h.room }}]
+            {% endif %}
+              {{ h.activity }}
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+  {% endfor %}
+</table>
+
+
+{% endblock %}
