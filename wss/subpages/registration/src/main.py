@@ -16,7 +16,7 @@ def main():
     try:
         with open(INFORMATION_FILE_PATH) as f:
             info = frontmatter.load(f)
-            html_cnt = template.render(p = info, uczestnicy=uczestnicy, referaty=referaty)
+            html_cnt = template.render(p = info, subpages=subpages, uczestnicy = info["uczestnicy"], referaty = info["referaty"])
     except Exception:
         print('could not read info')
         traceback.print_exc()
