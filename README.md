@@ -60,6 +60,19 @@ Główna strona knmt znajduje się w folderze `base`, który jest rozpisany wyż
 
 Każda strona i podstrona musi mieć swój plik `build.sh`, który jest wołany z `build.sh` znajdującego się poziom wyżej. Np. `base/subpages/books/build.sh` jest wołany z `base/build.sh`. Dlatego konieczne jest, aby każda podstrona posiadała własny skrypt budujący.
 
+## przed rozpoczęciem pracy
+
+Świeżo zklonowane repozytorium nie ma dobrze zainicjowanego podmodułu `content`. Aby to naprawić należy wejść do folderu z repo i wykonać polecenie
+```bash
+git submodule update --init --recursive
+```
+Po tym poleceniu repozytorium `content` będzie w stanie detached. Musimy więc tam wejść i przeskoczyć na branch main
+```bash
+cd content
+git checkout main
+```
+Commity i pulle repozytorium `content` domyślnie są niezależne od repozytorium `knmt-website`. Aby więc zaktualizować zawartość `content/` należy do niego wejść i wykonać proste `git pull`.
+
 ## testowanie
 
 Jeśli chcesz pracować nad stroną na Windowsie - wyjdź.
