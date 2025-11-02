@@ -5,7 +5,7 @@ Website for academic club of mathematicians at University of Wrocław
 
 **dependencies:** 
 
-- python packages: jinja2, python-frontmatter, markdown
+- python packages: [jinja2](https://jinja.palletsprojects.com/en/stable/), python-frontmatter, markdown
 - caddy for local testing
 
 ## zarządzanie informacjami ze strony
@@ -60,15 +60,60 @@ Główna strona knmt znajduje się w folderze `base`, który jest rozpisany wyż
 
 Każda strona i podstrona musi mieć swój plik `build.sh`, który jest wołany z `build.sh` znajdującego się poziom wyżej. Np. `base/subpages/books/build.sh` jest wołany z `base/build.sh`. Dlatego konieczne jest, aby każda podstrona posiadała własny skrypt budujący.
 
+## testowanie
+
+Jeśli chcesz pracować nad stroną na Windowsie - wyjdź.
+
+Stronę lokalnie można budować korzystając ze skryptu `build.sh` uruchomionego z roota projektu.
+
+W repozytorium znajduje się gotowa konfiguracja serwera Caddy. Aby go uruchomić wystarczy uruchomić skrypt `local_server.sh`, strona pojawi się na [`localhost:8080`](http://localhost:8080/).
+
 ## dodawanie podstrony
 
-Żeby dodać podstronę można skopiować istniejący folder z odpowiedniego folderu `subpages` (w `base` albo `wss`) i edytować jego plik `index.html` oraz `src/main.py`. Następnie należy dodać informacje o podstronie do pliku `subpages/list.md` zgodnie z poniższym schematem
+### base
+
+Dobrym punktem wyjścia jest skopiowanie folderu `base/subpages/template/` do `base/subpages/TWOJA_PODSTRONA`. W następnym kroku należy poinformować projekt, że chcemy mieć nową podstronę wyświetloną na pasku zakładek. Aby to osiągnąć wystarczy dodać informacje o podstronie do pliku `subpages/list.md` zgodnie z poniższym schematem
 
 ```
 subpages:
-    - { name: 'nazwa nowej podstrony wyświetlana na pasku nawigacji', 
-        url: 'ścieżka do nowej podstrony musi zgadzać się z nazwą foldera tworzonego przez build.sh',
-        special: true/false nieobowiązkowe pole pozwalające wyróżnić zakładkę na pasku nawigacji
-        }
+    - { name: 'NAZWA', url: '/URL/', special: true/false }
 ```
+- `NAZWA` to nazwa podstrony wyświetlana na pasku nawigacji
+- `URL` to nazwa folderu podstrony, czyli np. podstrona zawarta w folderze `books` powinna mieć `url: "/books/"`; ilość / jest bardzo ważna
+- `special` to wartość boolowska mówiąca, czy podstrona ma być wyróżniona na pasku nawigacji, czy ma wyglądać jak wszystkie pozostałe.
+
+Wytłumaczmy co zawiera każdy z plików zawartych w folderze `template`
+
+#### `index.html`
+
+Plik zawierający strukturę strony. Jest pisany według schematu Jinja2 (czyli HTML z brokatem). Przejdźmy szybko po najbardziej przydatnych elementach:
+
+- **zmienne**: zmienną w jinja definiujemy w podwójnych nawiasach klamrowych, np: `{{ moja_zmienna }}`; możemy również przekazać do templatki słownik, np. `samochod = { kolor: 'czerwony', ilosc_drzwi: 3 }`, wtedy jeśli chcemy w pewnym miejsciu wyświetlić kolor samochodu piszemy `{{ samochod.kolor }}`, albo zwykłą listę (o tym niżej)
+- **zdania warunkowe**: są to bloki, które zaczynają się `{% if warunek %}` i kończą `{% endif %}`, poniżej przykład nieco bardziej skomplikowanego zdania warunkowego:
+```
+{% if warunek1 %}
+    <b> warunek 1</b>
+{% elif warunek2 %}
+    <i> warunek 2</i>
+{% else %}
+    <u> ani warunek 1 ani warunek 2</u>
+{% endif %}
+```
+- **pętla for**: przy przekazaniu listy może okazać się użyteczna; tak jak zdania warunkowe pętle są blokami, syntaks podobny do Pythonowego:
+```
+{% for i in list %}
+    element z listy: <b>i</b>
+{% endfor %}
+```
+
+#### `build.sh`
+
+Skrypt odpalający budowanie podstrony. Należy w nim zmienić każde wystąpienie `TEMPLATE` na nazwę folderu podstrony.
+
+#### `src/main.py`
+
+Plik `main.py` to główny plik odpowiadający za budowanie podstrony. Można oczywiście tworzyć dodatkowe pliki w folderze `src`, które będą wołane z `main.py`.
+
+W podstawowej wersji należy zmienić w `main.py` wszystkie wystąpienia `TEMPLATE` na nazwę folderu podstrony oraz odpowiednio uzupełnić przekazywanie zmiennaych do templatki w `html_cnt = template.render(..., subpages=subpages)`. Nie należy usuwać przekazywania zmiennej `subpages` - ona odpowiada za poprawne wyświetlanie paska nawigacji.
+
 
