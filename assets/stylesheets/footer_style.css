@@ -89,10 +89,10 @@ footer h3 {
 
 .search_bar {
   padding-left: 25px;
-  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
-  background-size: 20px;
+  /* background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left; */
+  /* background-size: 20px; */
 
-  background-color: var(--bg);
+  /* background-color: var(--bg); */
 
   width: 300px;
   height: 25px;

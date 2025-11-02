@@ -74,6 +74,9 @@
       }
     </script>
 
+    <script async src="https://cse.google.com/cse.js?cx=46ab87147f8354991">
+    </script>
+
     <meta name="keywords" content="koło, naukowe, kolo, matematyka, matematyków, matematykow, worclaw, wrocław, teoretycznych, teoretyczna">
     <meta name="description" content="Strona internetowa Koła Naukowego Matematyków Teoretyków na Uniwersytecie Wrocławskim">
     <meta charset="UTF-8">
@@ -82,8 +85,6 @@
     <div class="main_header">
         <div class="search_contact">
           <a href="/info">Dane Kontaktowe</a>
-
-          <input class="search_bar" type="text" id="search" name="search" value placeholder="Szukaj" />
 
           <img src="/assets/img/facebook.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')" />
           <img src="/assets/img/calendar.svg" onclick="location.href='/calendar'" />
@@ -115,8 +116,7 @@
     <div class="main_container">
 
       {% block mainText %}
-      {% endblock %}
-    
+      {% endblock %} 
     </div>
 
     <footer>
@@ -132,7 +132,8 @@
 
         <div class="foot_search">
           <h3>Wyszukaj</h3>
-          <input class="search_bar" type="text" id="search" name="search" value placeholder="Szukaj">
+          <div class="gcse-search"></div>
+
         </div>
       <img src="/assets/img/logo/logo_knmt.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')" style="margin-bottom: 10px;" />
 
