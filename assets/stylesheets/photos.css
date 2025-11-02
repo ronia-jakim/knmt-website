@@ -1,0 +1,15 @@
+.album_container {
+  flex-wrap: wrap;
+
+  gap: 20px;
+}
+ 
+.album {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.album a {
+  font-size: 20px;
+}

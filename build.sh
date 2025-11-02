@@ -1,35 +1,22 @@
 #!/usr/bin/env bash
-
 rm -rf build
+mkdir build
 
-mkdir -p build
-# mkdir -p build/content/news
-mkdir -p build/stylesheets
+./base/build.sh
+./wss/build.sh
 
-mkdir -p build/wss
+mkdir -p build/assets/
 
-mkdir build/books build/info build/calendar
+# sass assets/stylesheets/basic-style.scss build/assets/stylesheets/basic-style.css
+# sass --sourcemap=none assets/stylesheets:build/assets/stylesheets
 
-cp -r assets build 
-cp -r content build/content
+# for f in assets/stylesheets/*.scss; do
+#   sass "$f" "build/assets/stylesheets/$(basename "${f%.scss}.css")"
+# done
 
-# sass ./src/stylesheets/colors_fonts.scss ./build/stylesheets/colors_fonts.css
-sass ./src/stylesheets/basic-style.scss ./build/stylesheets/basic-style.css
-sass ./src/stylesheets/news.scss ./build/stylesheets/news.css
-sass ./src/stylesheets/photos.scss ./build/stylesheets/photos.css
-sass ./src/stylesheets/calendar.scss ./build/stylesheets/calendar.css
+cp -r assets/stylesheets build/assets
+
+cp -r assets/img build/assets
+cp -r assets/fonts build/assets
 
 
-# if [[ " $* " == *" --github-pages "* ]]; then
-#   ./src/pytong/build_main.py --github-pages
-# else
-./src/pytong/build_main.py 
-# fi
-
-# python -m flask --app ./src/pytong/build_main.py run --debug
-
-curl -L 'https://docs.google.com/spreadsheets/d/1Vhrf9JDFxlYLtppxT66KXwg8l-e1yfeeT-GF-ymW_Aw/export?exportFormat=csv' > ./src/pytong/babysteps.csv
-
-./src/pytong/babysteps_registered.py
-
-rm ./src/pytong/babysteps.csv

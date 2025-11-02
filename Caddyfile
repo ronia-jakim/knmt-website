@@ -18,7 +18,7 @@
 
         # Serve static files from build directory
         root * ./build
-        try_files {path} {path}/ /index.html
+        try_files {path} {path}/index.html /index.html
         file_server {
             browse  # Enable directory listing
         }

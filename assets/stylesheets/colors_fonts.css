@@ -1,0 +1,34 @@
+:root {
+  --bg:  #F9F7FA; // #F0EBF4;
+  --fg: #252029;
+
+  --purple: #B39BC8;
+  --blue: #A1C3D1;
+
+  --subtitle: #3D6373;
+
+  --button_text: var(--fg);
+  --button_background: var(--blue);
+  --button_text_hover: var(--bg);
+  --button_hover_background: var(--subtitle);
+}
+
+[data-theme="dark"] { 
+  --bg: #252029;
+  --fg:  #F9F7FA; 
+
+  --purple: #B39BC8;
+  --blue: #3D6373;
+
+  --subtitle: #A1C3D1;
+
+  --button_text: var(--fg);
+  --button_background: var(--blue);
+  --button_text_hover: var(--bg);
+  --button_hover_background: var(--subtitle);
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}

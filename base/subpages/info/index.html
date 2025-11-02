@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block moreCSS %}
+<style>
+table {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+
+td, th {
+  padding: 0;
+  margin: 0;
+}
+
+th {
+  text-align: left;
+  padding-right: 10px !important;
+}
+
+a {
+  font-size: 16px !important;
+}
+</style>
+{% endblock %}
+
+{% block mainText %}
+
+<div class="flexrow_100" style="gap: 60px;">
+  <div>
+    <h2>Zarząd koła</h2>
+
+    <table>
+      <tr>
+        <th>Przewodniczący:</th>
+        <td>{{ p.prezes }}</td>
+      </tr>
+      <tr>
+        <th>Wice-przewodniczący:</th>
+        <td>{{ p.wice }}</td>
+      </tr>
+      <tr>
+        <th>Sekretarz:</th>
+        <td>{{ p.sekretarz }}</td>
+      </tr>
+      <tr>
+        <th>Skarbnik:</th>
+        <td>{{ p.skarbnik }}</td>
+      </tr>
+    </table>
+    <br />
+    <h2>Opiekun koła: </h2> 
+    <p style="margin-left: 10px !important;">
+      {{ p.opiekun }}
+    </p>
+  </div>
+
+  <div>
+    <h2>Kontakt</h2>
+    <table> 
+      <tr><td>pl. Grunwaldzki 2</td></tr>
+      <tr><td>50-384 Wrocław</td></tr>
+      <tr><td>POLSKA</td></tr>
+      <tr><td><a href="mailto:knmt@math.uni.wroc.pl">knmt@math.uni.wroc.pl</a></td></tr>
+    </table>
+  </div>
+</div>
+
+<embed src="/content/statut.pdf" type="application/pdf" style="width: 100%; height: 100vh; margin-top:40px;">
+
+{% endblock %}

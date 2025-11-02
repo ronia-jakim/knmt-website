@@ -1,0 +1,46 @@
+@import 'colors_fonts.css';
+
+.post_box {
+  gap: 20px;
+
+  min-height: 200px;
+}
+
+.post_img {
+  width: 250px;
+  height: 200px;
+
+  object-fit: cover;
+
+  cursor: pointer;
+}
+
+
+.side_bar {
+  display: none;
+}
+
+.post_board {
+  gap: 15px;
+
+  width: 100%;
+}
+
+@media all and (min-width: 1200px) {
+  .side_bar {
+    display: block;
+    height: 100px;
+
+    width: 300px;
+
+    padding-left: 5%;
+  }
+  .post_board {
+    margin-right: 30px;
+    width: calc(100% - 330px);
+
+    gap: 15px;
+  }
+
+}
+

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+    
+{% block moreCSS %}
+<link rel="stylesheet" href="/assets/stylesheets/news.css">
+{% endblock %}
+
+{% block mainText %}
+<div class="flexrow_100">
+
+<div class="flexcolumn post_board">
+
+{% for p in posts %}
+<div class="flexrow_100">
+  <div style="width: 250px;">
+    <img src="{{ p.preview_image }}" class="post_img" onclick="location.href='{{ p.path }}'" />
+  </div>
+  <div class="flexcolumn">
+    <h2 onclick="location.href='{{ p.path }}'" class="cursor_pointer">{{ p.title }}</h2>
+    <h4>{{ p.date }} {{ p.author }}</h4>
+    <p>{{ p.description }}</p>
+  </div>
+</div>
+{% endfor %}
+
+<div class="flexrow_100">
+  <a href="{{ prev }}">prev</a>
+  {% for p in pages %}
+  <a href="{{ p.url }}">{{ p.number }}</a>
+  {% endfor %}
+  <a href="{{ nxt }}">next</a>
+</div>
+
+</div>
+
+<div class="side_bar">
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FWarsaw&showPrint=0&src=a25tdC53bWlpLnV3ckBnbWFpbC5jb20&src=ZW4ucG9saXNoI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230B8043" style="border:solid 1px #777" width="300" height="300" frameborder="0" scrolling="no"></iframe>
+</div>
+
+</div>
+
+{% endblock %}

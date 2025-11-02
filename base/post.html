@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block moreCSS %}
+{% endblock %}
+
+{% block mainText %}
+
+<a onclick="history.back()">Powrót</a>
+
+<h1>{{ f.title }}</h1>
+{% if f.author %}
+  <h2>{{ f.author }}</h2>
+{% endif %}
+<h3>{{ f.date }} godz. {{ f.time }}</h3>
+
+<img style="max-height: 300px; object-fit: cover;" src="{{ f.preview_image }}">
+
+<div class="cnt">
+  {{ f.content }}
+</div>
+
+{% endblock %}

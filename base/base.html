@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Koło Naukowe Matematyków Teoretyków</title>
+    <link rel="icon" href="/assets/img/logo/logo.png" type="image/icon type">
+
+    <link rel="stylesheet" href="/assets/stylesheets/basic-style.css">
+
+    <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+    {% block moreCSS %}
+    {% endblock %}
+
+    <script>
+      const darkIcon = '/assets/img/light.svg'
+      const lightIcon = '/assets/img/moon.svg'
+
+      function toggleDarkTheme() {
+        let docBody = document.body
+
+        let themeIcon = document.getElementById("dark-theme")
+
+        const dataTheme = docBody.getAttribute("data-theme")
+
+        if (dataTheme === "dark") {
+          themeIcon.setAttribute("src", lightIcon)
+          
+          docBody.setAttribute("data-theme", "light")
+        }
+        else {
+          themeIcon.setAttribute("src", darkIcon)
+          
+          docBody.setAttribute("data-theme", "dark")
+        }
+      }
+
+      const params = new URLSearchParams(window.location.search)
+
+      let preferedTheme = "light"
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        preferedTheme = "dark"
+      }
+      let theme = params.get("theme") || preferedTheme
+
+      window.onload = function () {
+        document.body.setAttribute("data-theme", theme)
+
+        let themeIcon = document.getElementById("dark-theme")
+
+        if (theme === "dark") {
+          themeIcon.setAttribute("src", darkIcon)
+        }
+        else {
+          themeIcon.setAttribute("src", lightIcon)
+        }
+      }
+
+      function navigateTo(url) {
+        theme = document.body.getAttribute("data-theme") || "light"
+        const destination = `${url}?theme=${theme}`
+
+        window.open(destination, "_self")
+      }
+    </script>
+
+    <script async src="https://cse.google.com/cse.js?cx=46ab87147f8354991">
+    </script>
+
+    <meta name="keywords" content="koło, naukowe, kolo, matematyka, matematyków, matematykow, worclaw, wrocław, teoretycznych, teoretyczna">
+    <meta name="description" content="Strona internetowa Koła Naukowego Matematyków Teoretyków na Uniwersytecie Wrocławskim">
+    <meta charset="UTF-8">
+  </head>
+  <body data-theme="light">
+    <div class="main_header">
+        <div class="search_contact">
+          <a href="/info">Dane Kontaktowe</a>
+
+          <img src="/assets/img/facebook.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')" />
+          <img src="/assets/img/calendar.svg" onclick="location.href='/calendar'" />
+          <img src="/assets/img/light.svg" id="dark-theme" onclick="toggleDarkTheme()" >
+        </div>
+
+      <div class="left_header">
+        <img src="/assets/img/uwr-logo.svg" height="80px;" onclick="window.open('https://www.math.uni.wroc.pl/', '_blank')">
+        <div>
+          <h1>Koło Naukowe Matematyków Teoretyków</h1>
+          <h3>Uniwersytetu Wrocławskiego</h3>
+        </div>
+      </div>
+
+      <!-- <img src="/knmt-website/assets/img/logo/logo_knmt.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')"> -->
+      </div>
+
+    </div>
+    <div class="button_menu">
+      {% for sp in subpages %}
+        {% if sp.special %}
+          <button onclick="navigateTo('{{ sp.url }}')" style="background-color: #4E7F94;">{{ sp.name }}</button>
+        {% else %}
+          <button onclick="navigateTo('{{ sp.url }}')">{{ sp.name }}</button>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="main_container">
+
+      {% block mainText %}
+      {% endblock %} 
+    </div>
+
+    <footer>
+      <div class="info_foot">
+
+        <div class="foot_contact">
+          <h3>Dane kontaktowe</h3>
+          pl. Grunwaldzki 2<br>
+          50-384 Wrocław<br>
+          Polska<br>
+          <a href="mailto:knmt.wmii.uwr@gmail.com">knmt.wmii.uwr@gmail.com</a>
+        </div>
+
+        <div class="foot_search">
+          <h3>Wyszukaj</h3>
+          <div class="gcse-search"></div>
+
+        </div>
+      <img src="/assets/img/logo/logo_knmt.svg" onclick="window.open('https://www.facebook.com/knmtuwr', '_blank')" style="margin-bottom: 10px;" />
+
+      </div>
+
+      <div class="author_foot">
+        <div class="www_auth">
+          <a href="https://github.com/ronia-jakim" class="auth_name">Weronika Jakimowicz</a> <br/>
+          <a href="mailto:weronikajakimowicz2@gmail.com">weronikajakimowicz2@gmail.com</a>
+        </div>
+        <div class="www_auth">
+          <a href="https://github.com/Sileanth" class="auth_name">Łukasz Magnuszewski</a> <br/>
+          <a href="mailto:lukasz.magnuszewski@gmail.com">lukasz.magnuszewski@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

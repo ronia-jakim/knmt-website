@@ -1,6 +1,9 @@
-build/
+build/*
+*/build/*
 knmt-website/
-__pycache__/
+*/__pycache__/*
 venv/
 .venv/
 .sass*
+.sass*/
+.venv/
