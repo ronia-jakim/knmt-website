@@ -57,7 +57,11 @@ td {
         <td>
           {% if 'talks' in h %}
             {% for t in h.talks %}
-              [{{ t.room }}] <a href="{{ t.link }}">{{ t.title }}</a> - {{ t.author }}<br />
+              {% if 'Warsztaty' in t.title %}
+                [{{ t.room }}] {{ t.title }} - {{ t.author }}<br />
+              {% else %}
+                [{{ t.room }}] <a href="{{ t.link }}">{{ t.title }}</a> - {{ t.author }}<br />
+              {% endif %}
             {% endfor %}
           {% else %}
             {% if 'room' in h %}
