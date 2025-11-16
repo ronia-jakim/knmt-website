@@ -6,6 +6,8 @@ import traceback
 from base.src.basic_functions import getEnvironment, getSubpages
 
 ABSTRACT_FILE_PATH = 'content/files/abstract-template.tex'
+PREZENTACJA_A_FILE_PATH = 'content/files/prezentacja-template-A.tex'
+PREZENTACJA_B_FILE_PATH = 'content/files/prezentacja-template-B.tex'
 
 def main():
     env = getEnvironment()
@@ -13,10 +15,22 @@ def main():
     template = env.get_template('subpages/files/index.html')
     html_cnt = ''
     subpages = getSubpages()
+    abstract_tex = ''
+    prezentacja_A = ''
+    prezentacja_B = ''
     try:
         with open(ABSTRACT_FILE_PATH, "r", encoding="utf-8") as f:
             tex_content = f.read()
-            html_cnt = template.render(abstract = tex_content, subpages=subpages)
+            abstract_tex = tex_content 
+
+        with open(PREZENTACJA_A_FILE_PATH, "r", encoding="utf-8") as f:
+            tex_content = f.read()
+            prezentacja_A = tex_content 
+        with open(PREZENTACJA_B_FILE_PATH, "r", encoding="utf-8") as f:
+            tex_content = f.read()
+            prezentacja_B = tex_content 
+
+        html_cnt = template.render(abstract = abstract_tex, prezentacjaA=prezentacja_A, prezentacjaB=prezentacja_B, subpages=subpages)
     except Exception:
         print('could not read info')
         traceback.print_exc()
